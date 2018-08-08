@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LinearLayout_vertical"
+    android:background="@drawable/solid_white_no_border"
+    android:layout_margin="7dp"
+    android:padding="@dimen/dp_10">
+
+    <LinearLayout
+        style="@style/LinearLayout_horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            style="@style/TextView"
+            android:layout_width="70dp"
+            android:text="反馈原因"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_qms_reason"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/solid_white_border"
+            android:drawableRight="@drawable/down"
+            android:gravity="center_vertical"
+            android:hint="请选择"
+            android:padding="5dp"
+            android:textColorHint="@color/default_text_grey_color"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/LinearLayout_horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            style="@style/TextView"
+            android:layout_width="70dp"
+            android:text="发生频率"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_qms_frequency"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/solid_white_border"
+            android:drawableRight="@drawable/down"
+            android:gravity="center_vertical"
+            android:hint="请选择"
+            android:padding="5dp"
+            android:textColorHint="@color/default_text_grey_color"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/LinearLayout_horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            style="@style/TextView"
+            android:layout_width="70dp"
+            android:text="严重度"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_qms_severity"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/solid_white_border"
+            android:drawableRight="@drawable/down"
+            android:gravity="center_vertical"
+            android:hint="请选择"
+            android:padding="5dp"
+            android:textColorHint="@color/default_text_grey_color"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+</LinearLayout>

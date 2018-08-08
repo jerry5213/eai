@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="10dp">>
+
+        <TextView
+            style="@style/TextView"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:text="合同状态"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="@dimen/middle_font" />
+
+        <TextView
+            android:id="@+id/contact_state_selector"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_round_border"
+            android:drawableRight="@drawable/down"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="@string/please_select"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColorHint="@color/default_text_grey_color"
+            android:textSize="@dimen/middle_font"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="2dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="5dp"
+            android:text="项目信息"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="@dimen/large_font" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                style="@style/TextView"
+                android:layout_width="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1.5"
+                android:text="项目状态"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font" />
+
+            <TextView
+                android:id="@+id/project_State_selector"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/solid_white_border"
+                android:drawableRight="@drawable/down"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="@string/please_select"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColorHint="@color/default_text_grey_color" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                style="@style/TextView"
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1.5"
+                android:text="项目阶段"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font" />
+
+            <TextView
+                android:id="@+id/project_Stage_selector"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/solid_white_border"
+                android:drawableRight="@drawable/down"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="@string/please_select"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColorHint="@color/default_text_grey_color" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="5dp"
+            >
+            <TextView
+                style="@style/TextView"
+                android:layout_width="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1.5"
+                android:text="预计报价时间"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font" />
+
+            <TextView
+                android:id="@+id/exEQS_Date"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:gravity="center_vertical|left"
+                android:background="@drawable/bg_round_border"
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/middle_font" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                style="@style/TextView"
+                android:layout_width="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1.5"
+                android:text="预定签约日期"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font" />
+
+            <TextView
+                android:id="@+id/exSign_Date_selector"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_round_border"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:gravity="center_vertical|left"
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/middle_font" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                style="@style/TextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_gravity="left"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1.5"
+                android:text="预计付定金时间"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font" />
+
+            <TextView
+                android:id="@+id/exPay_Date_selector"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:gravity="center_vertical|left"
+                android:background="@drawable/bg_round_border"
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/middle_font" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                style="@style/TextView"
+                android:layout_width="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1.5"
+                android:text="预计交货期"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font" />
+
+            <TextView
+                android:id="@+id/exDelivery_Dateselector"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:gravity="center_vertical|left"
+                android:background="@drawable/bg_round_border"
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/middle_font" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="2dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="5dp"
+            android:text="项目跟踪"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="@dimen/large_font" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                style="@style/TextView"
+                android:layout_width="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1.5"
+                android:text="销售员"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font" />
+
+            <TextView
+                android:id="@+id/salesmanUser_text"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:gravity="center_vertical|left"
+                android:background="@drawable/bg_round_border_disable"
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/middle_font" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                style="@style/TextView"
+                android:layout_width="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1.5"
+                android:text="分公司"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font" />
+
+            <TextView
+                android:id="@+id/dept_text"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:gravity="center_vertical|left"
+                android:background="@drawable/bg_round_border_disable"
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/middle_font" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                style="@style/TextView"
+                android:layout_width="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1.5"
+                android:text="拜访客户名称"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font" />
+
+            <EditText
+                android:id="@+id/customerName_text"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:gravity="center_vertical|left"
+                android:background="@drawable/bg_round_border"
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/middle_font" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                style="@style/TextView"
+                android:layout_width="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1.5"
+                android:text="拜访时间"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font" />
+
+            <TextView
+                android:id="@+id/visitDate_text"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:gravity="center_vertical|left"
+                android:background="@drawable/bg_round_border"
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/middle_font" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                style="@style/TextView"
+                android:layout_width="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1.5"
+                android:text="拜访事由"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font" />
+
+            <EditText
+                android:id="@+id/visitReason_text"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:gravity="center_vertical|left"
+                android:background="@drawable/bg_round_border"
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/middle_font" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                style="@style/TextView"
+                android:layout_width="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1.5"
+                android:text="目的地"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font" />
+
+            <EditText
+                android:id="@+id/destination"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:gravity="center_vertical|left"
+                android:background="@drawable/bg_round_border"
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/middle_font" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_save"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_main_radius"
+        android:gravity="center"
+        android:text="保 存"
+        android:textColor="@color/white"
+        android:textSize="@dimen/middle_font" />
+
+</LinearLayout>

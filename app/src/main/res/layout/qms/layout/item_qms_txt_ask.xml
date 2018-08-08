@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LinearLayout_vertical"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_qms_txt"
+        style="@style/TextView"
+        android:background="@drawable/solid_blue_border"
+        android:padding="5dp"
+        android:text=""
+        android:textColor="@color/white"/>
+
+</LinearLayout>

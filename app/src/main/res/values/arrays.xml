@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="colorful">
+        <item>@color/grass_green</item>
+        <item>@color/green</item>
+        <item>@color/yellow</item>
+        <item>@color/light_blue</item>
+        <item>@color/blue</item>
+        <item>@color/dark_red</item>
+        <item>@color/purple</item>
+        <item>@color/main</item>
+    </integer-array>
+
+
+    <string-array name="dimension_full">
+        <item>@string/comfort</item>
+        <item>@string/function</item>
+        <item>@string/aesthetic</item>
+        <item>@string/service</item>
+        <item>@string/safety</item>
+    </string-array>
+
+
+    <string-array name="dimension_abb">
+        <item>@string/comfort_abb</item>
+        <item>@string/function_abb</item>
+        <item>@string/aesthetic_abb</item>
+        <item>@string/service_abb</item>
+        <item>@string/safety_abb</item>
+    </string-array>
+
+    <string-array name="dimension_line">
+        <item>@string/comfort_line</item>
+        <item>@string/function_line</item>
+        <item>@string/aesthetic_line</item>
+        <item>@string/service_line</item>
+        <item>@string/safety_line</item>
+    </string-array>
+
+
+    <integer-array name="btn_cycle_color">
+        <item>@color/light_blue</item>
+        <item>@color/green</item>
+        <item>@color/grass_green</item>
+        <item>@color/yellow</item>
+        <item>@color/dark_red</item>
+        <item>@color/purple</item>
+    </integer-array>
+
+    <integer-array name="bi_sale">
+        <item>@color/grass_green</item>
+        <item>@color/yellow_300</item>
+        <item>@color/yellow</item>
+        <item>@color/main</item>
+        <item>@color/light_blue</item>
+    </integer-array>
+</resources>

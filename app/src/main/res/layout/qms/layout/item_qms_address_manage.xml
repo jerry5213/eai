@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_change_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/ll"
+            style="@style/LinearLayout_horizontal">
+
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:text="王屠哈哈"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/customer_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:text="18752869999"
+                android:maxLength="11"
+                android:minWidth="50dp"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_default"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:background="@drawable/solid_main_border"
+                android:gravity="center"
+                android:text="默认"
+                android:textColor="@color/main_aa"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tv_label"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/blue_border"
+                android:textColor="@color/blue"
+                android:gravity="center"
+                android:text="公司"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center_horizontal"
+            android:text="辽宁省沈阳市和平区三好街80-1号"
+            android:textSize="@dimen/middle_font" />
+
+        <ImageView
+            android:id="@+id/tv_edit"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_edit"
+            />
+
+    </RelativeLayout>
+</LinearLayout>

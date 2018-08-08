@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_qms_question_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/default_text_black_color"
+        android:textSize="@dimen/middle_font"
+        android:text="问题多岁的"
+        />
+    <TextView
+        android:id="@+id/tv_qms_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/default_text_grey_color"
+        android:textSize="@dimen/small_font"
+        android:text="大手大脚速度快圣诞节开始的健康四大皆空"
+        />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        />
+</LinearLayout>

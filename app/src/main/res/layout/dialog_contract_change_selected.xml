@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="@string/change_category"
+            android:textStyle="bold"
+            android:textSize="@dimen/large_font" />
+
+        <TextView
+            android:id="@+id/bus_tv"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/solid_white_border"
+            android:gravity="center_horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:tag="0"
+            android:text="@string/business_change"
+            android:textColor="@color/default_text_grey_color" />
+
+
+        <TextView
+            android:id="@+id/spec_tv"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/solid_white_border"
+            android:gravity="center_horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:tag="0"
+            android:text="@string/spec_parameter_changes"
+            android:textColor="@color/default_text_grey_color" />
+
+        <TextView
+            android:id="@+id/cancel_change_tv"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/solid_white_border"
+            android:gravity="center_horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:tag="0"
+            android:text="取消变更"
+            android:textColor="@color/default_text_grey_color" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/confirm_tv"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main"
+        android:gravity="center"
+        android:tag=""
+        android:text="@string/confirm_"
+        android:textColor="@color/white"
+        android:textSize="@dimen/middle_font" />
+</RelativeLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        style="@style/LinearLayout_horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/icon_iv"
+            android:layout_width="15dp"
+            android:layout_centerVertical="true"
+            android:layout_height="15dp"
+            android:src="@mipmap/qms_contract_info" />
+
+        <TextView
+            style="@style/TextView"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@id/icon_iv"
+            android:text="@string/bid_info"
+            android:layout_centerVertical="true"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="@dimen/large_font"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/expand_iv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:src="@drawable/open" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/display_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/LinearLayout_horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/TextView"
+                android:layout_width="90dp"
+                android:text="@string/bid_deposit"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font" />
+
+            <ImageView
+                android:id="@+id/bid_bond_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="4dp"
+                android:background="@color/main_grey"
+                android:clickable="true"
+                android:padding="8dp"
+                android:src="@drawable/edit" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LinearLayout_horizontal"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/TextView"
+                android:layout_width="90dp"
+                android:text="投标情况分析"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font" />
+
+            <ImageView
+                android:id="@+id/bid_analysis_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="4dp"
+                android:background="@color/main_grey"
+                android:clickable="true"
+                android:padding="8dp"
+                android:src="@drawable/edit" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LinearLayout_horizontal"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/TextView"
+                android:layout_width="90dp"
+                android:text="投标价格"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font" />
+
+            <ImageView
+                android:id="@+id/bid_price_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="4dp"
+                android:background="@color/main_grey"
+                android:clickable="true"
+                android:padding="8dp"
+                android:src="@drawable/edit" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LinearLayout_horizontal"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/TextView"
+                android:layout_width="90dp"
+                android:text="付款账户信息"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font" />
+
+            <ImageView
+                android:id="@+id/payment_account_info_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="4dp"
+                android:background="@color/main_grey"
+                android:clickable="true"
+                android:padding="8dp"
+                android:src="@drawable/edit" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LinearLayout_horizontal"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/TextView"
+                android:layout_width="90dp"
+                android:text="项目付款方式"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font" />
+
+            <ImageView
+                android:id="@+id/project_payment_method_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="4dp"
+                android:background="@color/main_grey"
+                android:clickable="true"
+                android:padding="8dp"
+                android:src="@drawable/edit" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/LinearLayout_horizontal"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/TextView"
+                android:layout_width="90dp"
+                android:text="招投标附件"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font" />
+
+            <ImageView
+                android:id="@+id/bid_attchment_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="4dp"
+                android:background="@color/main_grey"
+                android:clickable="true"
+                android:padding="8dp"
+                android:src="@drawable/edit" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

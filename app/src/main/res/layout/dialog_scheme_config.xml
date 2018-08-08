@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/solid_white_border"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/common_layout"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/tip_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/scheme_subtraction"
+            android:textSize="@dimen/large_font"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tip_tv"
+            android:text="@string/msg4"
+            android:textSize="@dimen/middle_font" />
+
+        <ImageView
+            android:id="@+id/miss_iv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_close" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/dimens_layout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/top_layout"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_grey_radius"
+            android:gravity="center"
+            android:tag="Comfortable"
+            android:text="@string/comfort"
+            android:textSize="@dimen/small_font" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_grey_radius"
+            android:gravity="center"
+            android:tag="OPTIONALF"
+            android:text="@string/function"
+            android:textSize="@dimen/small_font" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_grey_radius"
+            android:gravity="center"
+            android:tag="BF-MGD"
+            android:text="@string/aesthetic"
+            android:textSize="@dimen/small_font" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_grey_radius"
+            android:gravity="center"
+            android:tag="SEVICE"
+            android:text="@string/service"
+            android:textSize="@dimen/small_font" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_grey_radius"
+            android:gravity="center"
+            android:tag="SafetyF"
+            android:text="@string/safety"
+            android:textSize="@dimen/small_font" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/recycle_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/line"
+        android:layout_below="@+id/dimens_layout"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/scheme_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recycle_layout"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/confirm_btn"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/solid_main_border"
+            android:gravity="center"
+            android:text="@string/query"
+            android:textColor="@color/main" />
+
+        <TextView
+            android:id="@+id/last_btn"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/text_grey_border"
+            android:gravity="center"
+            android:text="@string/last_batch"
+            android:textColor="@color/default_text_grey_color" />
+
+        <TextView
+            android:id="@+id/next_btn"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/text_grey_border"
+            android:gravity="center"
+            android:text="@string/next_batch"
+            android:textColor="@color/default_text_grey_color" />
+    </RelativeLayout>
+</RelativeLayout>

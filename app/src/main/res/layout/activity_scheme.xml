@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_grey"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/main_grey"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/spec" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_40"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/left_10"
+            android:gravity="center_vertical"
+            android:text="@string/parameter_rule"
+            android:textColor="@color/default_text_black_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/elevator_type"
+                android:textSize="@dimen/middle_font" />
+
+            <LinearLayout
+                android:id="@+id/category_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:background="@drawable/solid_white_border">
+
+                <TextView
+                    android:id="@+id/category_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:drawableRight="@drawable/down"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/passenger_elevator"
+                    android:textSize="@dimen/middle_font" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="25dp"
+                android:text="@string/machine_room"
+                android:textSize="@dimen/middle_font" />
+
+            <LinearLayout
+                android:id="@+id/room_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/solid_white_border">
+
+                <TextView
+                    android:id="@+id/room_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:drawableRight="@drawable/down"
+                    android:gravity="center"
+                    android:text="@string/mr"
+                    android:textSize="@dimen/middle_font" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/width_tv"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:text="@string/hoistway_width"
+                android:textSize="@dimen/middle_font" />
+
+            <com.warkiz.widget.IndicatorSeekBar
+                android:id="@+id/width_sb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/width_et"
+                android:layout_toRightOf="@+id/width_tv"
+                app:isb_indicator_custom_layout="@layout/custom_indicator"
+                app:isb_indicator_type="custom"
+                app:isb_max="295"
+                app:isb_min="150"
+                app:isb_progress="210"
+                app:isb_seek_bar_type="continuous_texts_ends"
+                app:isb_show_indicator="false"
+                app:isb_text_color="@color/text_color"
+                app:isb_text_left_end="1500"
+                app:isb_text_right_end="2950"
+                app:isb_text_size="11sp"
+                app:isb_thumb_color="@color/main"
+                app:isb_thumb_drawable="@drawable/thumb"
+                app:isb_thumb_progress_stay="true"
+                app:isb_thumb_width="30dp"
+                app:isb_track_background_bar_size="5dp"
+                app:isb_track_progress_bar_color="@color/main"
+                app:isb_track_progress_bar_size="5dp" />
+
+            <EditText
+                android:id="@+id/width_et"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:background="@drawable/solid_white_border"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLines="1"
+                android:text="2100"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="@dimen/middle_font" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/depth_tv"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:text="@string/hoistway_depth"
+                android:textSize="@dimen/middle_font" />
+
+
+            <com.warkiz.widget.IndicatorSeekBar
+                android:id="@+id/depth_sb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/depth_et"
+                android:layout_toRightOf="@+id/depth_tv"
+                app:isb_indicator_custom_layout="@layout/custom_indicator"
+                app:isb_indicator_type="custom"
+                app:isb_max="300"
+                app:isb_min="155"
+                app:isb_progress="220"
+                app:isb_seek_bar_type="continuous_texts_ends"
+                app:isb_show_indicator="false"
+                app:isb_text_color="@color/text_color"
+                app:isb_text_left_end="1550"
+                app:isb_text_right_end="3000"
+                app:isb_text_size="11sp"
+                app:isb_thumb_color="@color/main"
+                app:isb_thumb_drawable="@drawable/thumb"
+                app:isb_thumb_progress_stay="true"
+                app:isb_thumb_width="30dp"
+                app:isb_track_background_bar_size="5dp"
+                app:isb_track_progress_bar_color="@color/main"
+                app:isb_track_progress_bar_size="5dp" />
+
+
+            <EditText
+                android:id="@+id/depth_et"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:background="@drawable/solid_white_border"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLines="1"
+                android:text="2200"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="@dimen/middle_font" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp">
+
+            <TextView
+                android:id="@+id/layer_tv"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:text="@string/number_of_floors"
+                android:textSize="@dimen/middle_font" />
+
+            <com.warkiz.widget.IndicatorSeekBar
+                android:id="@+id/layer_sb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/layer_et"
+                android:layout_toRightOf="@+id/layer_tv"
+                app:isb_indicator_custom_layout="@layout/custom_indicator"
+                app:isb_indicator_type="custom"
+                app:isb_max="40"
+                app:isb_min="1"
+                app:isb_progress="10"
+                app:isb_seek_bar_type="continuous_texts_ends"
+                app:isb_show_indicator="false"
+                app:isb_text_color="@color/text_color"
+                app:isb_text_left_end="1"
+                app:isb_text_right_end="40"
+                app:isb_text_size="11sp"
+                app:isb_thumb_color="@color/main"
+                app:isb_thumb_drawable="@drawable/thumb"
+                app:isb_thumb_progress_stay="true"
+                app:isb_thumb_width="30dp"
+                app:isb_track_background_bar_size="5dp"
+                app:isb_track_progress_bar_color="@color/main"
+                app:isb_track_progress_bar_size="5dp" />
+
+            <EditText
+                android:id="@+id/layer_et"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:background="@drawable/solid_white_border"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLines="1"
+                android:text="10"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="@dimen/middle_font" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/main_grey"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/price" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_40"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/left_10"
+            android:gravity="center_vertical"
+            android:text="@string/equipment_budget"
+            android:textColor="@color/default_text_black_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"
+            android:gravity="right|center_vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/button_main_radius"
+                android:gravity="center"
+                android:text="@string/price_setting"
+                android:textColor="@color/white"
+                android:textSize="@dimen/middle_font"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.warkiz.widget.IndicatorSeekBar
+                android:id="@+id/price_sb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:isb_indicator_custom_layout="@layout/custom_indicator"
+                app:isb_indicator_type="custom"
+                app:isb_max="500"
+                app:isb_min="100"
+                app:isb_seek_bar_type="continuous_texts_ends"
+                app:isb_show_indicator="false"
+                app:isb_text_color="@color/text_color"
+                app:isb_text_left_end=""
+                app:isb_text_right_end=""
+                app:isb_text_size="11sp"
+                app:isb_thumb_color="@color/main"
+                app:isb_thumb_drawable="@drawable/thumb"
+                app:isb_thumb_progress_stay="true"
+                app:isb_thumb_width="30dp"
+                app:isb_track_background_bar_size="5dp"
+                app:isb_track_progress_bar_color="@color/main"
+                app:isb_track_progress_bar_size="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/price_et"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="4dp"
+                android:background="@drawable/solid_white_border"
+                android:enabled="true"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLines="1"
+                android:text="150000"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="@dimen/middle_font" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="@string/rmb" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/main_grey"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/func" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/left_10"
+            android:text="@string/function"
+            android:textColor="@color/default_text_black_color" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <com.zxtech.ecs.widget.SeekSpiderWeb
+            android:id="@+id/spw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="8dp" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="10dp">
+
+        <Button
+            android:id="@+id/confirm_btn"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/button_main_radius"
+            android:text="@string/confirm_"
+            android:textSize="@dimen/middle_font"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

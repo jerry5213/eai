@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/common_toolbar" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/color_background_all_gray"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#e6e6e6"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:gravity="center_vertical"
+        android:paddingTop="5dp">
+
+        <Button
+            android:id="@+id/voice_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="4dp"
+            android:background="@mipmap/voice"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@android:color/white" />
+
+        <EditText
+            android:id="@+id/send_content_et"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/solid_white_border"
+            android:hint="请输入你要问的问题"
+            android:maxLines="1"
+            android:paddingLeft="5dp"
+            android:textCursorDrawable="@drawable/edit_cursor_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/send_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="发送"
+            android:textColor="@color/main" />
+
+    </LinearLayout>
+
+</LinearLayout>

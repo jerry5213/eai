@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.zxtech.ecs.widget.tablayout.SegmentTabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        tl:tl_textsize="@dimen/small_font"
+        tl:tl_bar_color="#ffffff"
+        tl:tl_indicator_anim_enable="true"
+        tl:tl_indicator_color="@color/dark_red"
+        tl:tl_indicator_corner_radius="5dp"
+        tl:tl_textBold="SELECT" />
+
+
+    <com.zxtech.ecs.widget.ViewPagerSlide
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

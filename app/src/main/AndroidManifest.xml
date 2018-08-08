@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zxtech.ecs">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 震动权限 -->
+    <uses-feature android:name="android.hardware.camera" /> <!-- 使用照相机权限 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- 自动聚焦权限 -->
+    <uses-feature android:name="android.hardware.camera2.full" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="${app_icon}"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/BaseTheme"
+        tools:replace="android:name,allowBackup,icon,theme,label">
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+
+        <activity
+            android:name=".test.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+
+        <activity
+            android:name=".standard.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.login.WelcomeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!--fileProvider-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <!--元数据-->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+
+
+        <!--BAIDU语音 -->
+        <meta-data
+            android:name="com.baidu.speech.APP_ID"
+            android:value="10155587" />
+        <meta-data
+            android:name="com.baidu.speech.API_KEY"
+            android:value="V6MkRFcjSrIqSkLydpszRauh" />
+        <meta-data
+            android:name="com.baidu.speech.SECRET_KEY"
+            android:value="78ebccd30824ccca166576c59d907171" />
+        <!--高德地图 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="28b1785c0e8b28dc2e4d760a6b612a7a"
+            tools:replace="android:value" />
+
+
+        <!-- 您从百度网站获取的APP KEY -->
+        <meta-data
+            android:name="BaiduMobAd_STAT_ID"
+            android:value="92aef13ea9" />
+        <!-- 渠道商编号 -->
+        <meta-data
+            android:name="BaiduMobAd_CHANNEL"
+            android:value="release" />
+
+        <!-- 是否开启错误日志统计，默认为false -->
+        <meta-data
+            android:name="BaiduMobAd_EXCEPTION_LOG"
+            android:value="true" />
+        <!-- 日志发送策略，可选值：APP_START、ONCE_A_DAY、SET_TIME_INTERVAL，默认为APP_START -->
+        <meta-data
+            android:name="BaiduMobAd_SEND_STRATEGY"
+            android:value="APP_START" />
+        <!-- 日志发送策略 为SET_TIME_INTERVAL时，需设定时间间隔(取消下行注释)。取值为1-24的整数，默认为1 -->
+        <!-- <meta-data android:name="BaiduMobAd_TIME_INTERVAL" android:value="2" /> -->
+        <!-- 日志仅在wifi网络下发送，默认为false -->
+        <meta-data
+            android:name="BaiduMobAd_ONLY_WIFI"
+            android:value="true" />
+        <!-- 是否获取基站位置信息 ,默认为true -->
+        <meta-data
+            android:name="BaiduMobAd_CELL_LOCATION"
+            android:value="true" />
+        <!-- 是否获取GPS位置信息，默认为true -->
+        <meta-data
+            android:name="BaiduMobAd_GPS_LOCATION"
+            android:value="true" />
+        <!-- 是否获取WIFI位置信息，默认为true -->
+        <meta-data
+            android:name="BaiduMobAd_WIFI_LOCATION"
+            android:value="true" />
+        <!-- 百度统计-->
+
+
+        <!-- 百度定位 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+
+        <!-- AK鉴权 -->
+        <!-- meta-data需要写在application中 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="${baidu_lbs_api_key}" />
+
+        <!-- 百度定位 -->
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".ui.login.GuideActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".ui.login.RegisterActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".ui.login.PerfectInformationActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name=".ui.me.about.AboutActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="关于"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name=".ui.me.feedback.FeedBackActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="建议反馈"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+
+        <activity
+            android:name=".ui.me.UserInfoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="编辑个人资料"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".ui.me.ModifyInfoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="编辑个人资料"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name=".ui.me.ModifyPasswordActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="修改密码"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".ui.home.scheme.SchemeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="方案推荐"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".ui.home.scheme.SchemeCompareActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="方案推荐"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.scheme.detail.SchemeDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="方案详情"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.home.scheme.collection.CollectionActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/favorites_list"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".ui.home.escscheme.EscCollectionActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="扶梯收藏列表"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".ui.home.scheme.collection.CollectionDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="收藏详情"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".ui.home.company.activity.CompanyActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="公司介绍"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.home.company.activity.ShowBigImageActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="图片浏览"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.me.setting.SettingActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/label_system_setting"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.home.scheme.SchemeRedarActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="修改维度"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.qmsmanager.QmsMyWantFeedBackActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/qms_feedback"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.home.qmsmanager.QmsMyFeedBackActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/qms_response"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.qmsmanager.QmsEvaluateActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="评价"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.qmsmanager.QmsMyWantConsultationActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="我要咨询"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.qmsmanager.QmsMyFeedBackDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="订单详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.qmsmanager.QmsTaskTrackingActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="订单跟踪"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.qmsmanager.QmsMREditActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="物料需求录入"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.qmsmanager.QmsAddressManageActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="地址管理"
+            android:screenOrientation="portrait" />
+        <!--GKS Activity-->
+        <!--项目报备-->
+        <activity
+            android:name="com.zxtech.gks.ui.record.RecordApprovalActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="项目审批"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zxtech.gks.ui.record.RecordApprovalDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="审批详情"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.zxtech.gks.ui.record.RepeatProjectSearchActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="查找重复项目"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.zxtech.gks.ui.record.RecordApprovalSearchActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="查询"
+            android:screenOrientation="portrait" />
+
+        <!--项目报备 销售员-->
+        <activity
+            android:name="com.zxtech.gks.ui.record.sale.PRListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/project_application"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zxtech.gks.ui.record.sale.EditReportActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="新建项目"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zxtech.gks.ui.record.sale.EditCustomerActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="新增客户"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zxtech.gks.ui.record.sale.CustomerLookActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="客户查询"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zxtech.gks.ui.record.sale.ReadOnlyCustomerInfoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="客户信息"
+            android:screenOrientation="portrait" />
+
+        <!--项目价审-->
+        <activity
+            android:name="com.zxtech.gks.ui.pa.FbReviewWayActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="非标评审方案"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zxtech.gks.ui.pa.ContractBatchInfoFLDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="前线合同批次详细" />
+        <activity
+            android:name="com.zxtech.gks.ui.pa.ProjectInfoDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="项目详细信息"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zxtech.gks.ui.pa.ProjectPriceApprovalDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="价审详细"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.zxtech.gks.ui.pa.ProjectPriceApprovalListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="报价审批"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zxtech.gks.ui.pa.ReserveMoneyDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="预留费明细"
+            android:screenOrientation="portrait" />
+
+        <!--项目价审 销售员-->
+        <activity
+            android:name="com.zxtech.gks.ui.pa.sale.WaitPPAListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="项目报价"
+            android:screenOrientation="portrait"></activity>
+
+        <!--合同评审-->
+        <activity
+            android:name="com.zxtech.gks.ui.cr.ContractReviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="合同评审"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.zxtech.gks.ui.cr.ContractReviewDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="详细"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zxtech.gks.ui.cr.HtmlPreviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="标准合同预览"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.home.scheme.SchemePreviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="方案对比"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+
+        <activity
+            android:name=".ui.home.company.activity.ShowBigImageSimpleActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label=""
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.bi.Top10Activity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="销售台量TOP10"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name=".ui.bi.TrendActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="销售趋势"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name=".ui.bi.SaleActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="销售情况"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.home.quote.ProjectQuoteActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="报价申请"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".ui.home.quote.ProjectQuoteEditActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="项目报价"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+
+        <activity
+            android:name=".ui.home.engineering.EngineeringActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="土建申请"
+            android:screenOrientation="portrait">
+
+
+        </activity>
+
+        <activity
+            android:name=".ui.home.quote.DistributionActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="土建图布置"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name=".ui.home.quote.NewProductActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="新建产品"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".ui.home.quote.PriceListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="价格列表"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name=".ui.home.engineering.EngineeringEditActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="土建参数编辑"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+
+        <activity
+            android:name=".ui.tool.flowanalysis.FlowAnalysisActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="流量分析"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+
+        <activity
+            android:name=".ui.tool.layoutscheme.LayoutSchemeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="布置方案"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+
+        <activity
+            android:name=".ui.tool.decoration.DecorationMatchingActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="装潢选配"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+
+        <activity
+            android:name=".ui.home.designapply.DesignApplyActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="效果图申请"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+
+        <activity
+            android:name=".ui.home.escscheme.EscalatorSchemeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="扶梯方案"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+
+        <activity
+            android:name=".ui.home.qmsmanager.QmsAddressEdit"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="地址编辑"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+
+        <activity
+            android:name=".ui.home.qmsmanager.HtmlActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+        <activity
+            android:name=".ui.home.qmsmanager.bi.QmsBiActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="实时报表"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".ui.home.qmsmanager.bi.G1" />
+        <activity
+            android:name=".ui.home.qmsmanager.bi.LT"
+            android:label="处理周期" />
+
+        <activity
+            android:name=".ui.home.quote.ProductDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="产品明细"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+
+        <activity
+            android:name=".ui.home.quote.InstallationFeeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="安装费明细"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+
+        <activity
+            android:name=".ui.home.quote.ProductEditActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="产品编辑"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+
+        <activity
+            android:name=".ui.home.contract.ContractApplyActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="合同申请"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+
+        <activity
+            android:name=".ui.home.contract.ContractDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="合同详情"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+
+        <activity
+            android:name=".ui.home.follow.FollowActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="项目跟踪"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+
+        <activity
+            android:name=".ui.home.follow.WorkNodeListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="流程跟踪"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+
+        <activity
+            android:name=".ui.home.map.ProjectMapActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="项目地图"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+
+        <activity
+            android:name=".ui.login.FindBackPasswordActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/forgot_password$"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+
+        <activity
+            android:name=".ui.home.contractchange.ContractChangeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="合同变更"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+
+        <activity
+            android:name=".ui.home.contractchange.ContractChangeDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="变更详情"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+
+        </activity>
+
+        <activity
+            android:name=".ui.bi.SalesCapacityActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="销售产能"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+
+
+        <activity
+            android:name=".ui.bi.ChannelActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="渠道管理"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+
+        <activity
+            android:name=".ui.home.projecttrack.ProjectTrackTabActivity"
+            android:label="@string/title_activity_project_track_tab"
+            android:theme="@style/BaseTheme" >
+
+
+        </activity>
+
+        <activity
+            android:name=".ui.home.projecttrack.ProjectTrackInfoActivity"
+            android:label="@string/title_activity_project_track_info"
+            android:theme="@style/BaseTheme"></activity>
+
+        <activity
+            android:name=".ui.bi.ForecastActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="预测准确率"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+
+        <activity
+            android:name=".ui.bi.SalesActivitiesActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="销售活动"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+
+
+
+        </activity>
+
+        <activity
+            android:name=".ui.home.contractchange.ContractChangeApprovalActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="变更审批"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+
+        <activity
+            android:name=".ui.home.payment.PaymentActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="账款管理"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+
+        <activity
+            android:name=".ui.home.payment.AccountPaymentDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="分款详情"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+
+        <activity
+            android:name=".ui.home.payment.AccountPaymentProjectActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="项目清单"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+
+        <activity
+            android:name=".ui.home.payment.AccountPaymentOtherDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="分款详情"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <activity
+            android:name=".ui.home.bid.BidApplyActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="投标申请"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <activity
+            android:name=".ui.home.bid.BidDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="投标详情"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <activity
+            android:name=".ui.home.contractchange.CancelChangeDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="取消合同"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <activity
+            android:name=".ui.home.scheduling.SchedulingActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="合同排产"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+
+        <meta-data
+            android:name="com.zxtech.ecs.widget.photo.GlideConfiguration"
+            android:value="GlideModule" />
+
+    </application>
+
+</manifest>

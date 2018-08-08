@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/selection_collection_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/favorite_plans"
+            android:textColor="@color/main" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="@string/project_name$"
+                android:textColor="@color/default_text_black_color" />
+
+            <TextView
+                android:id="@+id/product_tv"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/solid_white_border"
+                android:drawableRight="@drawable/down"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="@string/please_select"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColorHint="@color/default_text_grey_color" />
+
+            <Space
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="@string/elevator_type$"
+                android:textColor="@color/default_text_black_color" />
+
+            <Space
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/model_tv"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/solid_white_border"
+                android:drawableRight="@drawable/down"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="@string/please_select"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColorHint="@color/default_text_grey_color" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/param1_title"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="@string/load_capacity$"
+                android:textColor="@color/default_text_black_color" />
+
+            <TextView
+                android:id="@+id/param1_tv"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/solid_white_border"
+                android:drawableRight="@drawable/down"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="@string/please_select"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColorHint="@color/default_text_grey_color" />
+
+            <Space
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/param2_title"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="@string/speed$"
+                android:textColor="@color/default_text_black_color" />
+
+            <Space
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/param2_tv"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/solid_white_border"
+                android:drawableRight="@drawable/down"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="@string/please_select"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColorHint="@color/default_text_grey_color" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="@string/guarantee_period$"
+                android:textColor="@color/default_text_black_color" />
+
+            <EditText
+                android:id="@+id/guarantee_date_et"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_round_border"
+                android:hint="0"
+                android:inputType="number"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textSize="@dimen/middle_font" />
+
+            <Space
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="@string/free_warranty_period"
+                android:textColor="@color/default_text_black_color" />
+
+            <Space
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/freeinsurance_date_et"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_round_border"
+                android:hint="0"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textSize="@dimen/middle_font" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/estimated_delivery"
+                android:textColor="@color/default_text_black_color" />
+
+            <!--<EditText
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_round_border"
+                android:textSize="@dimen/middle_font"
+                android:padding="5dp"
+                android:hint="0" />-->
+            <TextView
+                android:id="@+id/delivery_date_tv"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/solid_white_border"
+                android:drawableRight="@drawable/down"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="@string/please_select"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColorHint="@color/default_text_grey_color" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/batch_number"
+                android:textColor="@color/default_text_black_color" />
+
+            <Space
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="wrap_content" />
+
+            <com.zxtech.ecs.widget.AddAndSubText
+                android:id="@+id/tv_number"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:drawableLeft="@drawable/minus"
+                android:drawableRight="@drawable/plus"
+                android:gravity="center" />
+
+            <Space
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/starting_number"
+                android:textColor="@color/default_text_black_color" />
+
+            <Space
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/et_begin_num"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_round_border"
+                android:hint="1"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textSize="@dimen/middle_font" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="@string/elevator_number"
+                android:textColor="@color/default_text_black_color" />
+
+            <EditText
+                android:id="@+id/tv_pl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_round_border"
+                android:minHeight="30dp"
+                android:padding="5dp"
+                android:textSize="@dimen/middle_font" />
+
+            <Space
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_make"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_main_radius"
+                android:padding="5dp"
+                android:text="@string/generate"
+                android:textColor="@color/white" />
+
+            <Space
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/clear_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_main_radius"
+                android:padding="5dp"
+                android:text="@string/clear"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_ok"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/button_main_radius"
+                android:gravity="center"
+                android:text="@string/confirm"
+                android:textColor="@color/white"
+                android:textSize="@dimen/large_font" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

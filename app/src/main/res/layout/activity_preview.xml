@@ -1,0 +1,1290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/common_layout"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line"
+                android:background="@color/line" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/left_8"
+                android:gravity="center_vertical"
+                android:text="详细信息" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/dimens_tv"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/main_grey"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/left_8"
+                android:textSize="13sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line"
+                android:background="@color/line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/left_8"
+                android:gravity="center_vertical"
+                android:text="@string/price" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line"
+                android:background="@color/line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/left_8"
+                android:gravity="center_vertical"
+                android:text="@string/delivery" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line"
+                android:background="@color/line" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/line"
+            android:layout_height="match_parent"
+            android:background="@color/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/top3_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <com.zxtech.ecs.widget.MyScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 下部 左侧title-->
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/base_click_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/main_grey"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/left_8"
+                            android:text="@string/major" />
+
+                        <ImageView
+                            android:id="@+id/base_iv"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/close" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line"
+                        android:background="@color/line" />
+
+                    <LinearLayout
+                        android:id="@+id/base_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="电梯型号" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="梯号" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="电梯标准" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="电梯类型" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="有无机房" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="井道宽度" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="井道深度" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="楼层数" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="乘客人数" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="提升高度m" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="顶层高mm" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="底坑深mm" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="井道总高" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="@string/load" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="@string/speed" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="轿厢宽mm" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="轿厢深mm" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="站数" />
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="是否贯通" />
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="对重位置" />
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="井道安全门" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="供电电压" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="电源频率" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="照明电压" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="布置方式" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="群控数量" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="语音类型" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+
+                            <TextView
+                                android:id="@+id/typ_control_system_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="控制系统" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="驱动方式" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:background="@color/line" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ride_click_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/main_grey"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/left_8"
+                            android:text="@string/ride" />
+
+                        <ImageView
+                            android:id="@+id/ride_iv"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/close" />
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line"
+                        android:background="@color/line" />
+
+                    <LinearLayout
+                        android:id="@+id/ride_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="轿内隔音处理" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="音频功能" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="滚轮导靴" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="门机型号" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/survieliance_interface_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="@dimen/left_8"
+                                    android:gravity="center_vertical"
+                                    android:text="预留视频" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/upper_right_corner" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/att_Service_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="@dimen/left_8"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/driver_service" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/upper_right_corner" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/line"
+                            android:layout_height="match_parent"
+                            android:background="@color/line" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/traf_click_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/main_grey"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/left_8"
+                            android:text="功能配置" />
+
+                        <ImageView
+                            android:id="@+id/traf_iv"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/close" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line"
+                        android:background="@color/line" />
+
+                    <LinearLayout
+                        android:id="@+id/traf_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:maxLines="2"
+                                android:text="担架功能" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:maxLines="2"
+                                android:text="远程监控" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:maxLines="2"
+                                android:text="预开门" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/com_mon_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="@dimen/left_8"
+                                    android:ellipsize="end"
+                                    android:gravity="center_vertical"
+                                    android:maxLines="2"
+                                    android:text="小区监控" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/upper_right_corner" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/h_cop_m_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:layout_marginLeft="@dimen/left_8"
+                                    android:ellipsize="end"
+                                    android:gravity="center_vertical"
+                                    android:maxLines="2"
+                                    android:text="残操纵盘型号" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/upper_right_corner" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/clo_delay_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:layout_marginLeft="@dimen/left_8"
+                                    android:ellipsize="end"
+                                    android:gravity="center_vertical"
+                                    android:maxLines="2"
+                                    android:text="关门延时" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/upper_right_corner" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:id="@+id/chime_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:maxLines="2"
+                                android:text="轿内到站钟" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/line"
+                            android:layout_height="match_parent"
+                            android:background="@color/line" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/energy_click_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/main_grey"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/left_8"
+                            android:text="美观度" />
+
+                        <ImageView
+                            android:id="@+id/energy_iv"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/close" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line"
+                        android:background="@color/line" />
+
+                    <LinearLayout
+                        android:id="@+id/energy_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="150dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="轿厢" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="轿顶材质" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:maxLines="2"
+                                android:text="吊顶预留" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:maxLines="2"
+                                android:text="吊顶型号" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:maxLines="2"
+                                android:text="轿底预留" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/line"
+                            android:layout_height="match_parent"
+                            android:background="@color/line" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/aest_click_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/main_grey"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/left_8"
+                            android:text="服务" />
+
+                        <ImageView
+                            android:id="@+id/aest_iv"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/close" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line"
+                        android:background="@color/line" />
+
+                    <LinearLayout
+                        android:id="@+id/aest_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="控制类型" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/handicapped_kit_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:layout_marginLeft="@dimen/left_8"
+                                    android:gravity="center_vertical"
+                                    android:text="残障功能" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/upper_right_corner" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="强制关门" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/voice_ann_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:layout_marginLeft="@dimen/left_8"
+                                    android:gravity="center_vertical"
+                                    android:text="语音报站" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/upper_right_corner" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="操纵盘带IC卡 " />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/line"
+                            android:layout_height="match_parent"
+                            android:background="@color/line" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/safety_click_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/main_grey"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/left_8"
+                            android:text="安全增项" />
+
+                        <ImageView
+                            android:id="@+id/safety_iv"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/close" />
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line"
+                        android:background="@color/line" />
+
+                    <LinearLayout
+                        android:id="@+id/safety_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:maxLines="2"
+                                android:text="消防功能" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:maxLines="2"
+                                android:text="安全钳进口" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:gravity="center_vertical"
+                                android:text="限速器进口" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:maxLines="2"
+                                android:text="缓冲器进口" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="@dimen/left_8"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:maxLines="2"
+                                android:text="门保护" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/line"
+                                android:background="@color/line" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/line"
+                            android:layout_height="match_parent"
+                            android:background="@color/line" />
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line"
+                        android:background="@color/line" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/top_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </android.support.v7.widget.RecyclerView>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.zxtech.ecs.widget.MyScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/voice_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/voice_grey"
+        android:visibility="visible"
+        app:backgroundTint="?attr/colorPrimary" />
+
+    <LinearLayout
+        android:id="@+id/announcer_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="104dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/announcer"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+
+            />
+
+    </LinearLayout>
+</RelativeLayout>

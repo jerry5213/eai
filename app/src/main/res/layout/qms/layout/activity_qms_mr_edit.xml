@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <include layout="@layout/common_toolbar" />
+
+        <LinearLayout
+            style="@style/LinearLayout_vertical"
+            android:padding="@dimen/dp_10">
+
+            <LinearLayout
+                style="@style/LinearLayout_horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/TextView"
+                    android:layout_width="70dp"
+                    android:text="件号"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/et_qms_piece_no"
+                    style="@style/EditText"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/bg_round_border"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/LinearLayout_horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/TextView"
+                    android:layout_width="70dp"
+                    android:text="名称"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/et_qms_name"
+                    style="@style/EditText"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/bg_round_border"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/LinearLayout_horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/TextView"
+                    android:layout_width="70dp"
+                    android:text="问题代码"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_qms_question_code"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/solid_white_border"
+                    android:drawableRight="@drawable/down"
+                    android:gravity="center_vertical"
+                    android:hint="请选择"
+                    android:padding="5dp"
+                    android:textColorHint="@color/default_text_grey_color"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/LinearLayout_horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/TextView"
+                    android:layout_width="70dp"
+                    android:gravity="center_horizontal"
+                    android:text="数量"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/et_qms_number"
+                    style="@style/EditText"
+                    android:layout_width="40dp"
+                    android:background="@drawable/bg_round_border"
+                    android:inputType="number"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_qms_unit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/solid_white_border"
+                    android:drawableRight="@drawable/down"
+                    android:hint="请选择"
+                    android:padding="5dp"
+                    android:textColorHint="@color/default_text_grey_color"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_save"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginRight="@dimen/left_10"
+        android:layout_marginLeft="@dimen/left_10"
+        android:background="@drawable/button_main_radius"
+        android:textColor="@color/window_background_light"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:text="保存"
+        />
+</RelativeLayout>

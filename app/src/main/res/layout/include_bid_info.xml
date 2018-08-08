@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_10">
+
+    <LinearLayout
+        style="@style/LinearLayout_horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/qms_contract_info" />
+
+        <TextView
+            style="@style/TextView"
+            android:text="@string/bid_info"
+            android:layout_marginLeft="7dp"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="@dimen/large_font"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/LinearLayout_horizontal"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/TextView"
+            android:layout_width="90dp"
+            android:text="@string/service_fee_for_Winning_the_bid"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="@dimen/middle_font" />
+
+        <EditText
+            android:id="@+id/bid_fee_et"
+            style="@style/EditText"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_round_border_disable"
+            android:enabled="false"
+            android:inputType="number"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="@dimen/middle_font" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/LinearLayout_horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/TextView"
+            android:layout_width="90dp"
+            android:text="@string/bid_deposit"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="@dimen/middle_font" />
+
+        <ImageView
+            android:id="@+id/bid_bond_iv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="4dp"
+            android:background="@color/main_grey"
+            android:clickable="true"
+            android:padding="8dp"
+            android:src="@drawable/edit" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/LinearLayout_horizontal"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/TextView"
+            android:layout_width="90dp"
+            android:text="@string/contract_bond"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="@dimen/middle_font" />
+
+        <ImageView
+            android:id="@+id/performance_bond_iv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="4dp"
+            android:background="@color/main_grey"
+            android:clickable="true"
+            android:padding="8dp"
+            android:src="@drawable/edit" />
+
+    </LinearLayout>
+</LinearLayout>

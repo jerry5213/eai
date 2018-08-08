@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/edit_layout"
+        android:orientation="vertical">
+
+        <include layout="@layout/common_toolbar" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_10" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycleView_tool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_10" />
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/column0"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/textview_border_bg_gray"
+                        android:padding="5dp"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/column1"
+                        style="@style/tableTitleStyle"
+                        android:text="@string/inquiry_number" />
+
+                    <TextView
+                        android:id="@+id/column17"
+                        style="@style/tableTitleStyle"
+                        android:text="@string/quantity" />
+
+                    <TextView
+                        android:id="@+id/column2"
+                        style="@style/tableTitleStyle"
+                        android:text="@string/standard_equipment_price" />
+
+                    <TextView
+                        android:id="@+id/column3"
+                        style="@style/tableTitleStyle"
+                        android:text="@string/standard_installation_price" />
+
+                    <TextView
+                        android:id="@+id/column4"
+                        style="@style/tableTitleStyle"
+                        android:text="@string/equipment_price_after_discount" />
+
+                    <TextView
+                        android:id="@+id/column5"
+                        style="@style/tableTitleStyle"
+                        android:text="@string/installation_price_after_discount" />
+
+                    <TextView
+                        android:id="@+id/column6"
+                        style="@style/tableTitleStyle"
+                        android:text="@string/transportation_fee" />
+
+                    <TextView
+                        android:id="@+id/column7"
+                        style="@style/tableTitleStyle"
+                        android:text="@string/inspection_fee" />
+
+                    <TextView
+                        android:id="@+id/column8"
+                        style="@style/tableTitleStyle"
+                        android:text="@string/warranty_fee" />
+
+                    <TextView
+                        android:id="@+id/column9"
+                        style="@style/tableTitleStyle"
+                        android:text="@string/equipment" />
+
+                    <TextView
+                        android:id="@+id/column10"
+                        style="@style/tableTitleStyle"
+                        android:text="@string/other_fees_of_installation" />
+
+                    <TextView
+                        android:id="@+id/column11"
+                        style="@style/tableTitleStyle"
+                        android:text="@string/actual_unit_price_of_equipment" />
+
+                    <TextView
+                        android:id="@+id/column12"
+                        style="@style/tableTitleStyle"
+                        android:text="@string/actual_unit_price_of_installation" />
+
+                    <TextView
+                        style="@style/tableTitleStyle"
+                        android:text="@string/actual_equipment_price" />
+
+                    <TextView
+                        style="@style/tableTitleStyle"
+                        android:text="@string/actual_installation_price" />
+
+                    <TextView
+                        style="@style/tableTitleStyle"
+                        android:text="@string/adjustable_rate_of_equipment_price" />
+
+                    <TextView
+                        style="@style/tableTitleStyle"
+                        android:text="@string/adjustable_rate_of_installation_price" />
+
+                    <TextView
+                        style="@style/tableTitleStyle"
+                        android:text="@string/total_price_of_equipment_contract" />
+
+                    <TextView
+                        style="@style/tableTitleStyle"
+                        android:text="@string/total_price_of_installation_contract" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="65dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/count0"
+                        style="@style/tableCountColumnStyle"
+                        android:layout_height="30dp"
+                        android:text="@string/total" />
+
+                    <TextView
+                        style="@style/tableCountColumnStyle"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/count1"
+                        style="@style/tableCountColumnStyle" />
+
+                    <TextView
+                        android:id="@+id/count2"
+                        style="@style/tableCountColumnStyle" />
+
+                    <TextView
+                        android:id="@+id/count3"
+                        style="@style/tableCountColumnStyle" />
+
+                    <TextView
+                        android:id="@+id/count4"
+                        style="@style/tableCountColumnStyle" />
+
+                    <TextView
+                        android:id="@+id/count5"
+                        style="@style/tableCountColumnStyle" />
+
+                    <TextView
+                        android:id="@+id/count6"
+                        style="@style/tableCountColumnStyle" />
+
+                    <TextView
+                        android:id="@+id/count7"
+                        style="@style/tableCountColumnStyle" />
+
+                    <TextView
+                        android:id="@+id/count8"
+                        style="@style/tableCountColumnStyle" />
+
+                    <TextView
+                        android:id="@+id/count9"
+                        style="@style/tableCountColumnStyle" />
+
+                    <TextView
+                        android:id="@+id/count10"
+                        style="@style/tableCountColumnStyle" />
+
+                    <TextView
+                        android:id="@+id/count11"
+                        style="@style/tableCountColumnStyle" />
+
+                    <TextView
+                        android:id="@+id/count12"
+                        style="@style/tableCountColumnStyle" />
+
+
+                    <TextView
+                        android:id="@+id/count13"
+                        style="@style/tableCountColumnStyle" />
+
+                    <TextView
+                        android:id="@+id/count14"
+                        style="@style/tableCountColumnStyle" />
+
+                    <TextView
+                        android:id="@+id/count15"
+                        style="@style/tableCountColumnStyle" />
+
+                    <TextView
+                        android:id="@+id/count16"
+                        style="@style/tableCountColumnStyle" />
+
+                    <TextView
+                        style="@style/tableCountColumnStyle" />
+
+                    <TextView
+                        style="@style/tableCountColumnStyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycleView_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/item_product_list" />
+
+                    <TextView
+                        android:id="@+id/equi_total_tv"
+                        style="@style/tableContentStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text=""
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/inst_total_tv"
+                        style="@style/tableContentStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text=""
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/edit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/complete_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/main"
+            android:gravity="center"
+            android:text="@string/complete"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/cancel_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/text_color"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</RelativeLayout>

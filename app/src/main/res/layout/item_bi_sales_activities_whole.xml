@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/last_ms_tv"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="MS" />
+
+    <TextView
+        android:id="@+id/last_pro_tv"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Pro." />
+
+    <TextView
+        android:id="@+id/last_cov_tv"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Cov%" />
+
+    <TextView
+        android:id="@+id/last_booking_tv"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Booking" />
+
+    <TextView
+        android:id="@+id/last_hit_tv"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Hit%" />
+
+    <TextView
+        android:id="@+id/last_sos_tv"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="SOS" />
+
+    <TextView
+        android:id="@+id/last_hc_tv"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="HC" />
+
+    <TextView
+        android:id="@+id/area_tv"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/next_ms_tv"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="MS" />
+
+    <TextView
+        android:id="@+id/next_pro_tv"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Pro." />
+
+    <TextView
+        android:id="@+id/next_cov_tv"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Cov%" />
+
+    <TextView
+        android:id="@+id/next_booking_tv"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Booking" />
+
+    <TextView
+        android:id="@+id/next_hit_tv"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Hit%" />
+
+    <TextView
+        android:id="@+id/next_sos_tv"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="SOS" />
+
+    <TextView
+        android:id="@+id/next_hc_tv"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="HC" />
+
+    <TextView
+        android:id="@+id/next_vpy"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="VPY%" />
+
+    <TextView
+        android:id="@+id/follow_tv"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="关注/机会" />
+</LinearLayout>

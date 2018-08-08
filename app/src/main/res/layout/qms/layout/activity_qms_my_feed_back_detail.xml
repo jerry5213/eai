@@ -1,0 +1,909 @@
+<?xml version="1" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/LinearLayout_vertical"
+    android:layout_height="match_parent"
+    android:background="@color/color_background_all_gray">
+
+    <include layout="@layout/common_toolbar" />
+
+    <LinearLayout
+        style="@style/LinearLayout_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="@color/color_background_white"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp">
+
+        <TextView
+            style="@style/TextView"
+            android:layout_marginLeft="7dp"
+            android:text="附件信息"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="@dimen/large_font"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_qms_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                tools:listitem="@layout/item_qms_img" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        style="@style/ScrollView"
+        android:paddingBottom="20dp">
+
+        <LinearLayout style="@style/LinearLayout_vertical">
+
+            <LinearLayout
+                style="@style/LinearLayout_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/color_background_white"
+                android:padding="7dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/large_font"
+                    android:textColor="@color/default_text_black_color"
+                    android:text="问题描述："
+                    />
+                <TextView
+                    android:id="@+id/tv_qms_question_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/large_font"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/default_text_grey_color"
+                    android:text=""
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/large_font"
+                        android:textColor="@color/default_text_black_color"
+                        android:text="支持类型："
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/large_font"
+                        android:textColor="@color/default_text_grey_color"
+                        android:text="物料支持"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/LinearLayout_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/color_background_white"
+                android:paddingTop="7dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_qms_contract_status"
+                    style="@style/LinearLayout_horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="7dp"
+                    android:paddingTop="7dp">
+
+                    <TextView
+                        style="@style/TextView"
+                        android:layout_marginLeft="7dp"
+                        android:text="合同信息    "
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="@dimen/large_font"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/iv_qms_contract_status"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="25dp"
+                        android:src="@drawable/close" />
+
+                </LinearLayout>
+
+                <TableLayout
+                    android:id="@+id/tl_contract"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5sp"
+                    android:layout_marginTop="10dp"
+                    android:stretchColumns="1"
+                    android:visibility="gone">
+
+                    <!--TableRow 表示行，每行里面就可以 通过其他View来实现我们想要的方格-->
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/line">
+
+                        <TextView
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:padding="6dp"
+                            android:text="合同号"
+                            android:textColor="@color/default_text_black_color" />
+
+                        <TextView
+                            android:id="@+id/tv_qms_contract_no"
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="第二行" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/line">
+
+                        <TextView
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:padding="6dp"
+                            android:text="电梯来源"
+                            android:textColor="@color/default_text_black_color" />
+
+                        <TextView
+                            android:id="@+id/tv_qms_elevator_source"
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="第二行" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/line">
+
+                        <TextView
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:padding="6dp"
+                            android:text="服务状态"
+                            android:textColor="@color/default_text_black_color" />
+
+                        <TextView
+                            android:id="@+id/tv_qms_service_status"
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="第二行" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/line">
+
+                        <TextView
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:padding="6dp"
+                            android:text="开箱时间"
+                            android:textColor="@color/default_text_black_color" />
+
+                        <TextView
+                            android:id="@+id/tv_qms_open_box_time"
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="第二行" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/line">
+
+                        <TextView
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:padding="6dp"
+                            android:text="产品型号"
+                            android:textColor="@color/default_text_black_color" />
+
+                        <TextView
+                            android:id="@+id/tv_qms_product_no"
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="第二行" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/line">
+
+                        <TextView
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:padding="6dp"
+                            android:text="支持类型"
+                            android:textColor="@color/default_text_black_color" />
+
+                        <TextView
+                            android:id="@+id/tv_qms_support_type"
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="第二行" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/LinearLayout_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/color_background_white"
+                android:paddingTop="7dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_qms_invalid_status"
+                    style="@style/LinearLayout_horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="7dp"
+                    android:paddingTop="7dp">
+
+                    <TextView
+                        style="@style/TextView"
+                        android:layout_marginLeft="7dp"
+                        android:text="失效模式    "
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="@dimen/large_font"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/iv_qms_invalid_status"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="25dp"
+                        android:src="@drawable/close" />
+
+                </LinearLayout>
+
+                <TableLayout
+                    android:id="@+id/tl_invalid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5sp"
+                    android:layout_marginTop="10dp"
+                    android:stretchColumns="1"
+                    android:visibility="gone">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/line">
+
+                        <TextView
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:padding="6dp"
+                            android:text="子系统"
+                            android:textColor="@color/default_text_black_color" />
+
+                        <TextView
+                            android:id="@+id/tv_qms_sub_system"
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="第二行" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/line">
+
+                        <TextView
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:padding="6dp"
+                            android:text="组件"
+                            android:textColor="@color/default_text_black_color" />
+
+                        <TextView
+                            android:id="@+id/tv_qms_assembly"
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="第二行" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/line">
+
+                        <TextView
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:padding="6dp"
+                            android:text="部件"
+                            android:textColor="@color/default_text_black_color" />
+
+                        <TextView
+                            android:id="@+id/tv_qms_parts"
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="第二行" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/line">
+
+                        <TextView
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:padding="6dp"
+                            android:text="零件"
+                            android:textColor="@color/default_text_black_color" />
+
+                        <TextView
+                            android:id="@+id/tv_qms_spare_parts"
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="第二行" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/line">
+
+                        <TextView
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:padding="6dp"
+                            android:text="失效模式"
+                            android:textColor="@color/default_text_black_color" />
+
+                        <TextView
+                            android:id="@+id/tv_qms_invalid_mode"
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="第二行" />
+
+                    </TableRow>
+                </TableLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_un_materiel"
+                style="@style/LinearLayout_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/color_background_white"
+                android:paddingTop="7dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/ll_qms_un_materiel_status"
+                    style="@style/LinearLayout_horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="7dp"
+                    android:paddingTop="7dp">
+
+                    <TextView
+                        style="@style/TextView"
+                        android:layout_marginLeft="7dp"
+                        android:text="非物料需求"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="@dimen/large_font"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/iv_qms_un_materiel_status"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="25dp"
+                        android:src="@drawable/close" />
+
+                </LinearLayout>
+
+                <TableLayout
+                    android:id="@+id/tl_un_materiel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5sp"
+                    android:layout_marginTop="10dp"
+                    android:stretchColumns="1"
+                    android:visibility="gone">
+
+                    <!--TableRow 表示行，每行里面就可以 通过其他View来实现我们想要的方格-->
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/line">
+
+                        <TextView
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:padding="6dp"
+                            android:text="反馈原因"
+                            android:textColor="@color/default_text_black_color" />
+
+                        <TextView
+                            android:id="@+id/tv_qms_cause_feedback"
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="第二行" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/line">
+
+                        <TextView
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:padding="6dp"
+                            android:text="发生频率"
+                            android:textColor="@color/default_text_black_color" />
+
+                        <TextView
+                            android:id="@+id/tv_qms_happen_rate"
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="第二行" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/line">
+
+                        <TextView
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:padding="6dp"
+                            android:text="严重度"
+                            android:textColor="@color/default_text_black_color" />
+
+                        <TextView
+                            android:id="@+id/tv_qms_severity"
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="第二行" />
+                    </TableRow>
+
+                </TableLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_qms_materiel"
+                style="@style/LinearLayout_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/color_background_white"
+                android:paddingTop="7dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    style="@style/LinearLayout_horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="7dp"
+                    android:paddingTop="7dp">
+
+                    <TextView
+                        style="@style/TextView"
+                        android:layout_marginLeft="7dp"
+                        android:text="物料需求    "
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="@dimen/large_font"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/iv_qms_materiel"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="25dp"
+                        android:src="@drawable/close" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tl_materiel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycleView_mr"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="7dp"
+                        tools:listitem="@layout/item_qms_mr2" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/LinearLayout_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/color_background_white"
+                android:paddingTop="7dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_qms_patch_status"
+                    style="@style/LinearLayout_horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="7dp"
+                    android:paddingTop="7dp">
+
+                    <TextView
+                        style="@style/TextView"
+                        android:layout_marginLeft="7dp"
+                        android:text="补件信息    "
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="@dimen/large_font"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/iv_qms_patch_status"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="25dp"
+                        android:src="@drawable/close" />
+
+                </LinearLayout>
+
+                <TableLayout
+                    android:id="@+id/tl_patch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5sp"
+                    android:layout_marginTop="10dp"
+                    android:stretchColumns="1"
+                    android:visibility="gone">
+
+                    <!--TableRow 表示行，每行里面就可以 通过其他View来实现我们想要的方格-->
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:background="@color/line">
+
+                        <TextView
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:padding="6dp"
+                            android:text="工地联系人"
+                            android:textColor="@color/default_text_black_color" />
+
+                        <TextView
+                            android:id="@+id/tv_qms_site_contact"
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="第二行" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:background="@color/line">
+
+                        <TextView
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:padding="6dp"
+                            android:text="联系电话"
+                            android:textColor="@color/default_text_black_color" />
+
+                        <TextView
+                            android:id="@+id/tv_qms_site_contact_mobile"
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="第二行" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/line">
+
+                        <TextView
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:padding="6dp"
+                            android:text="补件地址"
+                            android:textColor="@color/default_text_black_color" />
+
+                        <TextView
+                            android:id="@+id/tv_qms_patch_address"
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="第二行" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/line">
+
+                        <TextView
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:padding="6dp"
+                            android:text="补件联系人"
+                            android:textColor="@color/default_text_black_color" />
+
+                        <TextView
+                            android:id="@+id/tv_qms_patch_contact"
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="第二行" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/line">
+
+                        <TextView
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:padding="6dp"
+                            android:text="联系电话"
+                            android:textColor="@color/default_text_black_color" />
+
+                        <TextView
+                            android:id="@+id/tv_qms_patch_contact_mobile"
+                            style="@style/TableRowTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="第二行" />
+                    </TableRow>
+
+                </TableLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/LinearLayout_vertical"
+                android:layout_marginTop="5dp"
+                android:background="@color/color_background_white">
+
+                <TextView
+                    style="@style/TextView"
+                    android:layout_gravity="center_horizontal"
+                    android:text="评 价"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/large_font"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    style="@style/LinearLayout_horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="7dp">
+
+                    <TextView
+                        style="@style/TextView"
+                        android:layout_width="wrap_content"
+                        android:text="满意度打分"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="@dimen/large_font"
+                        android:textStyle="bold" />
+
+                    <RatingBar
+                        android:id="@+id/rating_bar_qms"
+                        style="@style/foodRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:isIndicator="true"
+                        android:numStars="5" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_qms_detail_evaluate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:text="服务态度很好，物流很慢"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/large_font" />
+
+                <LinearLayout
+                    style="@style/LinearLayout_horizontal"
+                    android:padding="7dp">
+
+                    <TextView
+                        style="@style/TextView"
+                        android:layout_width="wrap_content"
+                        android:text="解决情况："
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="@dimen/large_font"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_qms_solve"
+                        style="@style/TextView"
+                        android:text="一次解决"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="@dimen/large_font" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/LinearLayout_horizontal"
+                    android:padding="7dp">
+
+                    <TextView
+                        style="@style/TextView"
+                        android:layout_width="120dp"
+                        android:text="物料到货时间"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_qms_materiel_arrival_time"
+                        style="@style/TextView"
+                        android:text="2018-12-12"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/LinearLayout_horizontal"
+                    android:padding="7dp">
+
+                    <TextView
+                        style="@style/TextView"
+                        android:layout_width="120dp"
+                        android:text="整改完成时间"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_qms_rectify_finish_time"
+                        style="@style/TextView"
+                        android:text="2018-12-12"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

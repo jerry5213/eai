@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/check_iv"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:clickable="true"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:src="@drawable/match" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@color/line" />
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="名称" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@color/line" />
+
+    <TextView
+        android:id="@+id/contact_person_tv"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="6dp"
+        android:gravity="center"
+        android:text="联系人" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@color/line" />
+
+    <TextView
+        android:id="@+id/address_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="6dp"
+        android:gravity="center_vertical"
+        android:text="地址" />
+</LinearLayout>

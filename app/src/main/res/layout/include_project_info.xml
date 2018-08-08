@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+  >
+
+    <LinearLayout
+        style="@style/LinearLayout_horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/qms_contract_info" />
+
+        <TextView
+            style="@style/TextView"
+            android:layout_marginLeft="7dp"
+            android:text="@string/eai_project_info"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="@dimen/large_font"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        style="@style/LinearLayout_horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/TextView"
+            android:layout_width="90dp"
+            android:text="@string/project_number"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="@dimen/middle_font" />
+
+        <TextView
+            android:id="@+id/prject_no_tv"
+            style="@style/EditText"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_round_border_disable"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:textColor="@color/default_text_grey_color"
+            android:textSize="@dimen/middle_font" />
+
+        <TextView
+            style="@style/TextView"
+            android:layout_width="70dp"
+            android:gravity="center_horizontal"
+            android:text="@string/sale_man"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="@dimen/middle_font" />
+
+        <TextView
+            android:id="@+id/saleman_tv"
+            style="@style/EditText"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_round_border_disable"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:textColor="@color/default_text_grey_color"
+            android:textSize="@dimen/middle_font" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/LinearLayout_horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/TextView"
+            android:layout_width="90dp"
+            android:text="@string/sales_branch"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="@dimen/middle_font" />
+
+        <TextView
+            android:id="@+id/sale_branch_tv"
+            style="@style/EditText"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_round_border_disable"
+            android:enabled="false"
+            android:textColor="@color/default_text_grey_color"
+            android:textSize="@dimen/middle_font" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/LinearLayout_horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/TextView"
+            android:layout_width="90dp"
+            android:text="@string/project_land_branch"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="@dimen/middle_font" />
+
+        <TextView
+            android:id="@+id/prject_branch_tv"
+            style="@style/EditText"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_round_border_disable"
+            android:enabled="false"
+            android:textColor="@color/default_text_grey_color"
+            android:textSize="@dimen/middle_font" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/LinearLayout_horizontal"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/TextView"
+            android:layout_width="90dp"
+            android:text="@string/project_name"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="@dimen/middle_font" />
+
+        <TextView
+            android:id="@+id/prject_name_tv"
+            style="@style/EditText"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_round_border_disable"
+            android:enabled="false"
+            android:textColor="@color/default_text_grey_color"
+            android:textSize="@dimen/middle_font" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/LinearLayout_horizontal"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/TextView"
+            android:layout_width="90dp"
+            android:text="@string/customer_name"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="@dimen/middle_font" />
+
+        <TextView
+            android:id="@+id/customer_tv"
+            style="@style/EditText"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_round_border_disable"
+            android:enabled="false"
+            android:textColor="@color/default_text_grey_color"
+            android:textSize="@dimen/middle_font" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/LinearLayout_horizontal"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/TextView"
+            android:layout_width="90dp"
+            android:text="@string/project_address"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="@dimen/middle_font" />
+
+        <TextView
+            android:id="@+id/fieldProvince"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_round_border_disable"
+            android:drawableRight="@drawable/down"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="@string/please_select"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColorHint="@color/default_text_grey_color"
+            android:textSize="@dimen/middle_font" />
+
+        <Space
+            android:layout_width="@dimen/dp_10"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/fieldCity"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_round_border_disable"
+            android:drawableRight="@drawable/down"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="@string/please_select"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColorHint="@color/default_text_grey_color"
+            android:textSize="@dimen/middle_font" />
+
+        <Space
+            android:layout_width="@dimen/dp_10"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/fieldArea"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_round_border_disable"
+            android:drawableRight="@drawable/down"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="@string/please_select"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColorHint="@color/default_text_grey_color"
+            android:textSize="@dimen/middle_font" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/LinearLayout_horizontal"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/TextView"
+            android:layout_width="90dp"
+            android:text="@string/detailed_address"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="@dimen/middle_font" />
+
+        <TextView
+            android:id="@+id/fieldOther"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_round_border_disable"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:paddingLeft="5dp"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="@dimen/middle_font" />
+
+    </LinearLayout>
+</LinearLayout>

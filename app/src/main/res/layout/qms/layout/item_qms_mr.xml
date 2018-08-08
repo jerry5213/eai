@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingBottom="1dp"
+    >
+
+    <LinearLayout
+        style="@style/LinearLayout_vertical"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/solid_white_no_border"
+        android:padding="10dp">
+
+        <LinearLayout style="@style/LinearLayout_horizontal">
+
+            <LinearLayout
+                style="@style/LinearLayout_horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/TextView"
+                    android:text="件号："
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/middle_font" />
+
+                <TextView
+                    android:id="@+id/et_qms_piece_no"
+                    style="@style/TextView"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/middle_font" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/LinearLayout_horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/TextView"
+                    android:gravity="center_horizontal"
+                    android:text="名称："
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/middle_font" />
+
+                <TextView
+                    android:id="@+id/et_qms_name"
+                    style="@style/TextView"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/middle_font" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LinearLayout_horizontal"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                style="@style/LinearLayout_horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/TextView"
+                    android:text="问题代码："
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/middle_font" />
+
+                <TextView
+                    android:id="@+id/tv_qms_question_code"
+                    style="@style/TextView"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/LinearLayout_horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/TextView"
+                    android:gravity="center_horizontal"
+                    android:text="数量："
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/middle_font" />
+
+                <TextView
+                    android:id="@+id/et_qms_number"
+                    style="@style/EditText"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/middle_font" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/delete_btn"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:background="@color/main_aa"
+        android:focusable="false"
+        android:text="删除"
+        android:textColor="@color/white"/>
+
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>

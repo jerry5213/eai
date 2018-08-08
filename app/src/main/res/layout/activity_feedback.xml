@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <EditText
+        android:id="@+id/suggestion_et"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/solid_border"
+        android:gravity="top"
+        android:hint="@string/hint_suggestion"
+        android:maxLength="500"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:textSize="@dimen/middle_font" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/feedback_image_title" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/image_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_tv"
+        android:background="@color/white" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:inputType="phone"
+        android:text="@string/contact_number" />
+
+    <EditText
+        android:id="@+id/contact_phone_et"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/white"
+        android:hint="@string/hint_contact_call"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:paddingLeft="8dp"
+        android:textSize="@dimen/middle_font" />
+
+    <Button
+        android:id="@+id/submit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_main_radius"
+        android:text="@string/submit_"
+        android:textColor="@color/white"
+        android:textSize="@dimen/middle_font" />
+</LinearLayout>

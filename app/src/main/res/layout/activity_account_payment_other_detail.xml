@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/save_btn"
+        android:layout_below="@+id/common_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <include layout="@layout/include_pay_info" />
+
+            <LinearLayout
+                style="@style/LinearLayout_horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/qms_contract_info" />
+
+                <TextView
+                    style="@style/TextView"
+                    android:layout_marginLeft="7dp"
+                    android:text="@string/assignment_info"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/large_font"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/LinearLayout_horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    style="@style/TextView"
+                    android:layout_width="90dp"
+                    android:text="@string/unassigned_balance"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/middle_font" />
+
+                <TextView
+                    android:id="@+id/rest_money_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_round_border_disable"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/default_text_grey_color"
+                    android:textSize="@dimen/middle_font" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/LinearLayout_horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    style="@style/TextView"
+                    android:layout_width="90dp"
+                    android:text="@string/current_assigned_amount"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/middle_font" />
+
+                <EditText
+                    android:id="@+id/allot_et"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:inputType="numberDecimal"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_round_border"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/default_text_grey_color"
+                    android:textSize="@dimen/middle_font" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                style="@style/LinearLayout_horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    style="@style/TextView"
+                    android:layout_width="90dp"
+                    android:text="@string/purpose_of_payment"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/middle_font" />
+
+                <TextView
+                    android:id="@+id/invoice_attribution_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_round_border"
+                    android:drawableRight="@drawable/down"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="@string/please_select"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/default_text_grey_color"
+                    android:textSize="@dimen/middle_font" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/LinearLayout_horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    style="@style/TextView"
+                    android:layout_width="90dp"
+                    android:text="@string/payment_notes"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/middle_font" />
+
+                <TextView
+                    android:id="@+id/payment_remark_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_round_border"
+                    android:drawableRight="@drawable/down"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="@string/please_select"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/default_text_grey_color"
+                    android:textSize="@dimen/middle_font" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/LinearLayout_horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    style="@style/TextView"
+                    android:layout_width="90dp"
+                    android:text="@string/info_provided_by"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/middle_font" />
+
+                <EditText
+                    android:id="@+id/info_supporter_et"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_round_border"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/default_text_grey_color"
+                    android:textSize="@dimen/middle_font" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/LinearLayout_horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    style="@style/TextView"
+                    android:layout_width="90dp"
+                    android:text="@string/invoice_receiver"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/middle_font" />
+
+                <EditText
+                    android:id="@+id/invoice_unit_et"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_round_border"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/default_text_grey_color"
+                    android:textSize="@dimen/middle_font" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/LinearLayout_horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    style="@style/TextView"
+                    android:layout_width="90dp"
+                    android:text="@string/contract_no"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/middle_font" />
+
+                <EditText
+                    android:id="@+id/contract_no_et"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_round_border"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/default_text_grey_color"
+                    android:textSize="@dimen/middle_font" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/LinearLayout_horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    style="@style/TextView"
+                    android:layout_width="90dp"
+                    android:text="@string/contract_file_no"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/middle_font" />
+
+                <EditText
+                    android:id="@+id/archives_no_et"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_round_border"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/default_text_grey_color"
+                    android:textSize="@dimen/middle_font" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/LinearLayout_horizontal"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp">
+
+
+                <EditText
+                    android:id="@+id/project_name_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/bg_round_border"
+                    android:ellipsize="end"
+                    android:gravity="top"
+                    android:hint="@string/hit_project_name_and_payment_description"
+                    android:padding="5dp"
+                    android:textColorHint="@color/default_text_grey_color"
+                    android:textSize="@dimen/middle_font" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/save_btn"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/button_main_radius"
+        android:gravity="center"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textSize="@dimen/middle_font" />
+
+</RelativeLayout>

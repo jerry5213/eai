@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/group_layout"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@android:color/white"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_width="@dimen/line"
+        android:layout_height="match_parent"
+        android:background="@color/line" />
+
+    <LinearLayout
+        android:id="@+id/select_layout"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/select_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/match_check" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="@dimen/line"
+        android:layout_height="match_parent"
+        android:background="@color/line" />
+
+    <TextView
+        android:id="@+id/collection_tv"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal"
+        android:text="收藏名称"
+        android:textColor="@color/default_text_black_color" />
+
+    <View
+        android:layout_width="@dimen/line"
+        android:layout_height="match_parent"
+        android:background="@color/line" />
+
+    <TextView
+        android:id="@+id/price_tv"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="5dp"
+        android:gravity="center_horizontal"
+        android:text="设备价格"
+        android:textColor="@color/default_text_black_color" />
+
+    <View
+        android:layout_width="@dimen/line"
+        android:layout_height="match_parent"
+        android:background="@color/line" />
+
+    <TextView
+        android:id="@+id/params1_tv"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal"
+        android:textColor="@color/default_text_black_color" />
+
+
+    <View
+        android:layout_width="@dimen/line"
+        android:layout_height="match_parent"
+        android:background="@color/line" />
+
+    <TextView
+        android:id="@+id/params3_tv"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal"
+        android:textColor="@color/default_text_black_color" />
+
+    <View
+        android:layout_width="@dimen/line"
+        android:layout_height="match_parent"
+        android:background="@color/line" />
+
+    <TextView
+        android:id="@+id/params4_tv"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal"
+        android:textColor="@color/default_text_black_color" />
+
+    <View
+        android:layout_width="@dimen/line"
+        android:layout_height="match_parent"
+        android:background="@color/line" />
+
+    <TextView
+        android:id="@+id/params5_tv"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal"
+        android:textColor="@color/default_text_black_color" />
+
+    <View
+        android:layout_width="@dimen/line"
+        android:layout_height="match_parent"
+        android:background="@color/line" />
+
+    <TextView
+        android:id="@+id/params6_tv"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal"
+        android:textColor="@color/default_text_black_color" />
+
+    <View
+        android:layout_width="@dimen/line"
+        android:layout_height="match_parent"
+        android:background="@color/line" />
+
+    <TextView
+        android:id="@+id/params7_tv"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal"
+        android:textColor="@color/default_text_black_color" />
+
+    <View
+        android:layout_width="@dimen/line"
+        android:layout_height="match_parent"
+        android:background="@color/line" />
+
+    <TextView
+        android:id="@+id/params8_tv"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal"
+        android:textColor="@color/default_text_black_color" />
+
+    <View
+        android:layout_width="@dimen/line"
+        android:layout_height="match_parent"
+        android:background="@color/line" />
+
+
+    <TextView
+        android:id="@+id/collect_time_tv"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="5dp"
+        android:gravity="center_horizontal"
+        android:text="收藏时间"
+        android:textColor="@color/default_text_black_color" />
+
+    <View
+        android:layout_width="@dimen/line"
+        android:layout_height="match_parent"
+        android:background="@color/line" />
+
+</LinearLayout>

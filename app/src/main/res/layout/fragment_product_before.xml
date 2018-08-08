@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_10" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="4dp"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="#FFBBBBAA" />
+                <LinearLayout
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/column0"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/textview_border_bg_gray"
+                        android:padding="@dimen/left_15"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/column1"
+                        style="@style/tableTitleStyle"
+                        android:text="@string/inquiry_number" />
+
+                    <TextView
+                        android:id="@+id/column2"
+                        style="@style/tableTitleStyle"
+                        android:text="@string/product_name" />
+
+                    <TextView
+                        android:id="@+id/column3"
+                        style="@style/tableTitleStyle"
+                        android:text="@string/quantity" />
+
+                    <TextView
+                        android:id="@+id/column4"
+                        style="@style/tableTitleStyle"
+                        android:text="@string/product_parameters" />
+
+                    <TextView
+                        android:id="@+id/column5"
+                        style="@style/tableTitleStyle"
+                        android:text="@string/estimated_delivery_time" />
+
+                    <TextView
+                        style="@style/tableTitleStyle"
+                        android:text="@string/guarantee_period" />
+
+                    <TextView
+                        style="@style/tableTitleStyle"
+                        android:text="@string/free_warranty_period" />
+
+                    <TextView
+                        android:id="@+id/column6"
+                        style="@style/tableTitleStyle"
+                        android:text="@string/total_price_of_equipment" />
+
+                    <TextView
+                        android:id="@+id/column7"
+                        style="@style/tableTitleStyle"
+                        android:text="@string/elevator_number" />
+
+                    <TextView
+                        android:id="@+id/column8"
+                        style="@style/tableTitleStyle"
+                        android:text="@string/version" />
+
+                    <TextView
+                        android:id="@+id/column9"
+                        style="@style/tableTitleStyle"
+                        android:text="@string/confirm_version" />
+
+                    <TextView
+                        android:id="@+id/column10"
+                        style="@style/tableTitleStyle"
+                        android:text="@string/non_standard_status" />
+
+                    <TextView
+                        android:id="@+id/column11"
+                        style="@style/tableTitleStyle"
+                        android:text="@string/submission_date" />
+
+                    <TextView
+                        android:id="@+id/column12"
+                        style="@style/tableTitleStyle"
+                        android:text="@string/inquiry_process_status" />
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/item_product_info" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_10"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/actual_discount"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font" />
+
+            <TextView
+                android:id="@+id/project_real_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/middle_font" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="项目FL设备CMII%："
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font" />
+
+            <TextView
+                android:id="@+id/project_fl_eq_cm2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="colFLCMIIRateEqui"
+                android:text="0.2"
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/middle_font" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="项目FL安装CMII%："
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font" />
+
+            <TextView
+                android:id="@+id/project_fl_inst_cm2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.5"
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/middle_font" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="项目FLCMII%："
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font" />
+
+            <TextView
+                android:id="@+id/project_fl_cm2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="colFLCMIIRate"
+                android:text="0.1"
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/middle_font" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="项目全链设备CMII%："
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font" />
+
+            <TextView
+                android:id="@+id/FCCMIIRateEqui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="colFCCMIIRateEqui"
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/middle_font" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="项目全链安装CMII%："
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font" />
+
+            <TextView
+                android:id="@+id/FCCMIIRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="colCMIIRateInst"
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/middle_font" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="项目全链 CMII%："
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/middle_font" />
+
+            <TextView
+                android:id="@+id/FCCMII"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="colFCCMII"
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/middle_font" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="5dp"
+            android:background="@color/line" />
+
+        <TextView
+            android:id="@+id/tv_fl_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:text="@string/details"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="@dimen/middle_font" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

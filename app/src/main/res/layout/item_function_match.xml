@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/desc_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:text="功能描述"
+        android:textColor="@color/default_text_black_color"
+        android:textSize="@dimen/small_font" />
+
+    <View
+        android:id="@+id/horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/line" />
+
+    <LinearLayout
+        android:id="@+id/right_layout"
+        android:layout_width="130dp"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/horizontal_line"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/minus_btn"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/minus" />
+
+        <TextView
+            android:id="@+id/value_tv"
+            android:layout_width="0dp"
+            android:layout_height="21dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="@dimen/small_font" />
+
+        <ImageView
+            android:id="@+id/plus_btn"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/plus" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+
+    <include
+        layout="@layout/common_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            >
+
+            <include layout="@layout/include_project_info_intro" />
+
+            <LinearLayout
+                style="@style/LinearLayout_horizontal"
+                android:gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/qms_contract_info" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center_vertical"
+                    android:layout_marginLeft="7dp"
+                    android:text="@string/terms_of_payment"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/large_font"
+                    android:textStyle="bold"
+                    />
+
+                <ImageView
+                    android:id="@+id/tv_open_fk"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    android:src="@drawable/close" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fk_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/payment_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/default_text_grey_color"
+                    android:textSize="@dimen/middle_font" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/panel_toubiaoxinxi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 作废 - -->
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/color_background_all_gray">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="@string/bidding_information"
+                        android:textColor="@color/default_text_black_color" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/line" />
+
+                    <ImageView
+                        android:id="@+id/tv_open_tb"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:padding="5dp"
+                        android:src="@drawable/close" />
+
+                </RelativeLayout>
+                <!--投标信息 --> <!-- 作废 - -->
+                <include
+                    android:visibility="gone"
+                    layout="@layout/include_toubiaoxinxi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+                <FrameLayout
+                    android:id="@+id/l_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                style="@style/LinearLayout_horizontal"
+                android:gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/qms_contract_info" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center_vertical"
+                    android:layout_marginLeft="7dp"
+                    android:text="@string/contract_information"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/large_font"
+                    android:textStyle="bold"
+                    />
+
+                <ImageView
+                    android:id="@+id/tv_open_ht_xx"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    android:src="@drawable/close" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ht_xx_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ht_txt1"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="@dimen/middle_font" />
+
+                    <TextView
+                        android:id="@+id/EqContractTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/default_text_grey_color"
+                        android:text="85000"
+                        android:textSize="@dimen/middle_font" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ht_txt2"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="@dimen/middle_font" />
+
+                    <TextView
+                        android:id="@+id/inst_contract_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/default_text_grey_color"
+                        android:text="25000"
+                        android:textSize="@dimen/middle_font" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ht_txt3"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="@dimen/middle_font" />
+
+                    <TextView
+                        android:id="@+id/TotalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/default_text_grey_color"
+                        android:text="25000"
+                        android:textSize="@dimen/middle_font" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ht_txt4"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="@dimen/middle_font" />
+
+                    <TextView
+                        android:id="@+id/EquiObligatePriceForSale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/default_text_grey_color"
+                        android:text="50000"
+                        android:textSize="@dimen/middle_font" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ht_txt5"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="@dimen/middle_font" />
+
+                    <TextView
+                        android:id="@+id/InstOtherPriceForSale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/default_text_grey_color"
+                        android:text="50000"
+                        android:textSize="@dimen/middle_font" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ht_txt6"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="@dimen/middle_font" />
+
+                    <TextView
+                        android:id="@+id/FloatRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/default_text_grey_color"
+                        android:text="20%"
+                        android:textSize="@dimen/middle_font" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ht_txt7"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="@dimen/middle_font" />
+
+                    <TextView
+                        android:id="@+id/flcm2_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/default_text_grey_color"
+                        android:text="5%"
+                        android:textSize="@dimen/middle_font" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ht_txt8"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="@dimen/middle_font" />
+
+                    <TextView
+                        android:id="@+id/flcm2_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/default_text_grey_color"
+                        android:text="5%"
+                        android:textSize="@dimen/middle_font" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ht_txt10"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="@dimen/middle_font" />
+
+                    <TextView
+                        android:id="@+id/fccm2_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/default_text_grey_color"
+                        android:tag="colFCCMII"
+                        android:text="10%"
+                        android:textSize="@dimen/middle_font" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ht_txt9"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="@dimen/middle_font" />
+
+                    <TextView
+                        android:id="@+id/tv_BidPoundage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/default_text_grey_color"
+                        android:text=""
+                        android:textSize="@dimen/middle_font" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+            
+            <LinearLayout
+                style="@style/LinearLayout_horizontal"
+                android:gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/qms_contract_info" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center_vertical"
+                    android:layout_marginLeft="7dp"
+                    android:text="@string/batch_details"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/large_font"
+                    android:textStyle="bold"
+                    />
+
+                <ImageView
+                    android:id="@+id/tv_open_ht_pc"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    android:src="@drawable/close" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ht_pc_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <include
+                    layout="@layout/include_hetongpici"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fwfsp_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    >
+
+                    <ImageView
+                        android:id="@+id/icon_iv"
+                        android:layout_width="15dp"
+                        android:layout_centerVertical="true"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/qms_contract_info" />
+
+                    <TextView
+                        style="@style/TextView"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@id/icon_iv"
+                        android:text="@string/commission_application"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="@dimen/large_font"
+                        android:textStyle="bold"
+                        />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/lv_front_fwf"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:scrollbars="none"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/input_panel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/approver"
+                                android:textColor="@color/default_text_black_color"
+                                android:textSize="@dimen/middle_font" />
+
+                            <TextView
+                                android:id="@+id/tv_approve_person"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:textColor="@color/default_text_grey_color"
+                                android:text=""
+                                android:textSize="@dimen/middle_font" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="@string/amount2"
+                                android:textColor="@color/default_text_black_color"
+                                android:textSize="@dimen/middle_font" />
+
+                            <EditText
+                                android:id="@+id/et_price"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/circle_corner_button"
+                                android:gravity="right"
+                                android:hint="0"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:textColor="@color/default_text_grey_color"
+                                android:textColorHint="@color/default_text_grey_color"
+                                android:textSize="@dimen/middle_font" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="@string/service_rate"
+                                android:textColor="@color/default_text_black_color"
+                                android:textSize="@dimen/middle_font" />
+
+                            <EditText
+                                android:id="@+id/et_agentCommissionRate"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/circle_corner_button"
+                                android:gravity="right"
+                                android:hint="0"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:textColor="@color/default_text_grey_color"
+                                android:textColorHint="@color/default_text_grey_color"
+                                android:textSize="@dimen/middle_font" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="@string/ht_txt6"
+                                android:textColor="@color/default_text_black_color"
+                                android:textSize="@dimen/middle_font" />
+
+                            <TextView
+                                android:id="@+id/tv_float_rate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:textColor="@color/default_text_grey_color"
+                                android:text=""
+                                android:textSize="@dimen/middle_font" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="@string/operation"
+                                android:textColor="@color/default_text_black_color"
+                                android:textSize="@dimen/middle_font" />
+
+                            <TextView
+                                android:id="@+id/tv_save"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/button_main_radius"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingTop="5dp"
+                                android:text="@string/save"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/middle_font" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:id="@+id/icon_iv2"
+                    android:layout_width="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/qms_contract_info" />
+
+                <TextView
+                    style="@style/TextView"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@id/icon_iv2"
+                    android:text="@string/detail_of_approval"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/large_font"
+                    android:textStyle="bold"
+                    />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:scrollbars="none"
+                />
+            
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:id="@+id/icon_iv3"
+                    android:layout_width="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/qms_contract_info" />
+
+                <TextView
+                    style="@style/TextView"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@id/icon_iv3"
+                    android:text="@string/opinions"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/large_font"
+                    android:textStyle="bold"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/report"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="上报" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/switch_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:switchMinWidth="20dp"
+                        style="@style/SwitchButtonStyle"
+                      />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <EditText
+                    android:id="@+id/et_opinion"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_round_border"
+                    android:gravity="top|left"
+                    android:maxLines="5"
+                    android:padding="5dp"
+                    android:textSize="@dimen/middle_font" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:orientation="horizontal"
+                    android:paddingTop="15dp">
+
+                    <TextView
+                        android:id="@+id/tv_refuse"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_main_radius"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/rejected"
+                        android:textColor="@android:color/white"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_ok"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/button_main_radius"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/approved"
+                        android:textColor="@android:color/white"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

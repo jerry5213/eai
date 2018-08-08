@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+
+        <!--TableRow 表示行，每行里面就可以 通过其他View来实现我们想要的方格-->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/line">
+
+            <TextView
+                style="@style/TableRowTextView"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:padding="6dp"
+                android:text="件号"
+                android:textColor="@color/default_text_black_color" />
+
+            <TextView
+                android:id="@+id/et_qms_piece_no"
+                style="@style/TableRowTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="第二行" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/line">
+
+            <TextView
+                style="@style/TableRowTextView"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:padding="6dp"
+                android:text="名称"
+                android:textColor="@color/default_text_black_color" />
+
+            <TextView
+                android:id="@+id/et_qms_name"
+                style="@style/TableRowTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="第二行" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/line">
+
+            <TextView
+                style="@style/TableRowTextView"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:padding="6dp"
+                android:text="问题代码"
+                android:textColor="@color/default_text_black_color" />
+
+            <TextView
+                android:id="@+id/tv_qms_question_code"
+                style="@style/TableRowTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="第二行" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/line">
+
+            <TextView
+                style="@style/TableRowTextView"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:padding="6dp"
+                android:text="数量"
+                android:textColor="@color/default_text_black_color" />
+
+            <TextView
+                android:id="@+id/et_qms_number"
+                style="@style/TableRowTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="第二行" />
+        </TableRow>
+
+    </TableLayout>
+    <TextView
+        android:id="@+id/tv_line"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/color_background_all_gray"
+        />
+</LinearLayout>

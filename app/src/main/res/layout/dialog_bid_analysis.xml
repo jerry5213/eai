@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/save_tv">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="价格分分值" />
+
+                <EditText
+                    android:id="@+id/quotation_value_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_round_border"
+                    android:gravity="center_vertical"
+                    android:hint="@string/required"
+                    android:inputType="numberDecimal"
+                    android:padding="5dp"
+                    android:textColorHint="@color/default_text_grey_color"
+                    android:textSize="@dimen/middle_font" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="技术分分值" />
+
+                <EditText
+                    android:id="@+id/technology_value_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_round_border"
+                    android:gravity="center_vertical"
+                    android:hint="@string/required"
+                    android:inputType="numberDecimal"
+                    android:padding="5dp"
+                    android:textColorHint="@color/default_text_grey_color"
+                    android:textSize="@dimen/middle_font" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="其它分值" />
+
+                <EditText
+                    android:id="@+id/other_value_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_round_border"
+                    android:gravity="center_vertical"
+                    android:hint="@string/required"
+                    android:inputType="numberDecimal"
+                    android:padding="5dp"
+                    android:textColorHint="@color/default_text_grey_color"
+                    android:textSize="@dimen/middle_font" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:text="价格分评分标准" />
+
+                <EditText
+                    android:id="@+id/quotation_standard_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/bg_round_border"
+                    android:gravity="center_vertical|top"
+                    android:hint="@string/required"
+                    android:padding="5dp"
+                    android:textColorHint="@color/default_text_grey_color"
+                    android:textSize="@dimen/middle_font" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:text="技术分说明" />
+
+                <EditText
+                    android:id="@+id/technology_remark_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/bg_round_border"
+                    android:gravity="center_vertical|top"
+                    android:hint="@string/required"
+                    android:padding="5dp"
+                    android:textColorHint="@color/default_text_grey_color"
+                    android:textSize="@dimen/middle_font" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:text="其它分值说明" />
+
+                <EditText
+                    android:id="@+id/other_remark_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/bg_round_border"
+                    android:gravity="center_vertical|top"
+                    android:hint="@string/required"
+                    android:padding="5dp"
+                    android:textColorHint="@color/default_text_grey_color"
+                    android:textSize="@dimen/middle_font" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:hint="@string/required"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:text="价格分评分说明" />
+
+                <EditText
+                    android:id="@+id/quotation_remark_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/bg_round_border"
+                    android:gravity="center_vertical|top"
+                    android:hint="@string/required"
+                    android:padding="5dp"
+                    android:textColorHint="@color/default_text_grey_color"
+                    android:textSize="@dimen/middle_font" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/save_tv"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main"
+        android:gravity="center"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textSize="@dimen/middle_font" />
+</RelativeLayout>

@@ -1,0 +1,361 @@
+<?xml version="1.0"?>
+<records>
+    <struct>
+        <id>1</id>
+        <head>处理周期</head>
+        <par1>目标值</par1>
+        <par1val>4</par1val>
+        <par2>当前月度</par2>
+        <par2val>5.6</par2val>
+
+            <y2014>23</y2014>
+            <y2015>54</y2015>
+            <y2016>12</y2016>
+            <y2017>14</y2017>
+            <y2018>43</y2018>
+
+
+
+
+
+            <jan15>88</jan15>
+            <feb15>93</feb15>
+            <mar15>21</mar15>
+            <apr15>23</apr15>
+            <may15>96</may15>
+            <jun15>12</jun15>
+            <jul15>78</jul15>
+            <aug15>81</aug15>
+            <sep15>12</sep15>
+            <oct15>34</oct15>
+            <nov15>56</nov15>
+            <dec15>67</dec15>
+
+
+
+        <jan16>32</jan16>
+        <feb16>23</feb16>
+        <mar16>78</mar16>
+        <apr16>23</apr16>
+        <may16>96</may16>
+        <jun16>12</jun16>
+        <jul16>78</jul16>
+        <aug16>81</aug16>
+        <sep16>12</sep16>
+        <oct16>34</oct16>
+        <nov16>56</nov16>
+        <dec16>67</dec16>
+
+        <jan17>32</jan17>
+        <feb17>23</feb17>
+        <mar17>78</mar17>
+        <apr17>23</apr17>
+        <may17>96</may17>
+        <jun17>12</jun17>
+        <jul17>78</jul17>
+        <aug17>81</aug17>
+        <sep17>12</sep17>
+        <oct17>34</oct17>
+        <nov17>56</nov17>
+        <dec17>67</dec17>
+
+
+
+
+
+        <jan18>32</jan18>
+        <feb18>23</feb18>
+        <mar18>78</mar18>
+        <apr18>23</apr18>
+        <may18>96</may18>
+        <jun18>12</jun18>
+        <jul18>78</jul18>
+        <aug18>81</aug18>
+        <sep18>12</sep18>
+        <oct18>34</oct18>
+        <nov18>56</nov18>
+        <dec18>67</dec18>
+
+
+
+
+
+    </struct>
+
+
+
+    <struct>
+        <id>2</id>
+        <head>质量成本</head>
+        <par1>2018YTD</par1>
+        <par1val>4256</par1val>
+        <par2>ROLLING</par2>
+        <par2val>67</par2val>
+
+        <y2014>23</y2014>
+        <y2015>54</y2015>
+        <y2016>12</y2016>
+        <y2017>14</y2017>
+        <y2018>43</y2018>
+
+
+
+
+        <y2014>23</y2014>
+        <y2015>54</y2015>
+        <y2016>12</y2016>
+        <y2017>14</y2017>
+        <y2018>43</y2018>
+
+
+
+
+
+        <jan15>12</jan15>
+        <feb15>43</feb15>
+        <mar15>21</mar15>
+        <apr15>23</apr15>
+        <may15>96</may15>
+        <jun15>12</jun15>
+        <jul15>78</jul15>
+        <aug15>81</aug15>
+        <sep15>12</sep15>
+        <oct15>34</oct15>
+        <nov15>56</nov15>
+        <dec15>67</dec15>
+
+
+        <jan16>32</jan16>
+        <feb16>23</feb16>
+        <mar16>78</mar16>
+        <apr16>23</apr16>
+        <may16>96</may16>
+        <jun16>12</jun16>
+        <jul16>78</jul16>
+        <aug16>81</aug16>
+        <sep16>12</sep16>
+        <oct16>34</oct16>
+        <nov16>56</nov16>
+        <dec16>67</dec16>
+
+        <jan17>32</jan17>
+        <feb17>23</feb17>
+        <mar17>78</mar17>
+        <apr17>23</apr17>
+        <may17>96</may17>
+        <jun17>12</jun17>
+        <jul17>78</jul17>
+        <aug17>81</aug17>
+        <sep17>12</sep17>
+        <oct17>34</oct17>
+        <nov17>56</nov17>
+        <dec17>67</dec17>
+
+
+
+
+
+        <jan18>32</jan18>
+        <feb18>23</feb18>
+        <mar18>78</mar18>
+        <apr18>23</apr18>
+        <may18>96</may18>
+        <jun18>12</jun18>
+        <jul18>78</jul18>
+        <aug18>81</aug18>
+        <sep18>12</sep18>
+        <oct18>34</oct18>
+        <nov18>56</nov18>
+        <dec18>67</dec18>
+
+
+
+
+
+
+    </struct>
+
+
+
+    <struct>
+        <id>3</id>
+        <head>逃逸数报表</head>
+        <par1>2018YTD</par1>
+        <par1val>1090</par1val>
+        <par2>当前月度</par2>
+        <par2val>1009</par2val>
+
+        <y2014>23</y2014>
+        <y2015>54</y2015>
+        <y2016>12</y2016>
+        <y2017>14</y2017>
+        <y2018>43</y2018>
+
+
+
+
+        <y2014>23</y2014>
+        <y2015>54</y2015>
+        <y2016>12</y2016>
+        <y2017>14</y2017>
+        <y2018>43</y2018>
+
+
+
+
+
+        <jan15>12</jan15>
+        <feb15>43</feb15>
+        <mar15>21</mar15>
+        <apr15>23</apr15>
+        <may15>96</may15>
+        <jun15>12</jun15>
+        <jul15>78</jul15>
+        <aug15>81</aug15>
+        <sep15>12</sep15>
+        <oct15>34</oct15>
+        <nov15>56</nov15>
+        <dec15>67</dec15>
+
+
+        <jan16>32</jan16>
+        <feb16>23</feb16>
+        <mar16>78</mar16>
+        <apr16>23</apr16>
+        <may16>96</may16>
+        <jun16>12</jun16>
+        <jul16>78</jul16>
+        <aug16>81</aug16>
+        <sep16>12</sep16>
+        <oct16>34</oct16>
+        <nov16>56</nov16>
+        <dec16>67</dec16>
+
+        <jan17>32</jan17>
+        <feb17>23</feb17>
+        <mar17>78</mar17>
+        <apr17>23</apr17>
+        <may17>96</may17>
+        <jun17>12</jun17>
+        <jul17>78</jul17>
+        <aug17>81</aug17>
+        <sep17>12</sep17>
+        <oct17>34</oct17>
+        <nov17>56</nov17>
+        <dec17>67</dec17>
+
+
+
+
+
+        <jan18>32</jan18>
+        <feb18>23</feb18>
+        <mar18>78</mar18>
+        <apr18>23</apr18>
+        <may18>96</may18>
+        <jun18>12</jun18>
+        <jul18>78</jul18>
+        <aug18>81</aug18>
+        <sep18>12</sep18>
+        <oct18>34</oct18>
+        <nov18>56</nov18>
+        <dec18>67</dec18>
+
+
+
+
+
+
+    </struct>
+
+    <struct>
+        <id>3</id>
+        <head>质量问题排行</head>
+        <par1>2018YTD</par1>
+        <par1val>1000</par1val>
+        <par2>当前月度</par2>
+        <par2val>64</par2val>
+
+        <y2014>23</y2014>
+        <y2015>54</y2015>
+        <y2016>12</y2016>
+        <y2017>14</y2017>
+        <y2018>43</y2018>
+
+
+
+
+        <y2014>23</y2014>
+        <y2015>54</y2015>
+        <y2016>12</y2016>
+        <y2017>14</y2017>
+        <y2018>43</y2018>
+
+
+
+
+
+        <jan15>12</jan15>
+        <feb15>43</feb15>
+        <mar15>21</mar15>
+        <apr15>23</apr15>
+        <may15>96</may15>
+        <jun15>12</jun15>
+        <jul15>78</jul15>
+        <aug15>81</aug15>
+        <sep15>12</sep15>
+        <oct15>34</oct15>
+        <nov15>56</nov15>
+        <dec15>67</dec15>
+
+
+        <jan16>32</jan16>
+        <feb16>23</feb16>
+        <mar16>78</mar16>
+        <apr16>23</apr16>
+        <may16>96</may16>
+        <jun16>12</jun16>
+        <jul16>78</jul16>
+        <aug16>81</aug16>
+        <sep16>12</sep16>
+        <oct16>34</oct16>
+        <nov16>56</nov16>
+        <dec16>67</dec16>
+
+        <jan17>32</jan17>
+        <feb17>23</feb17>
+        <mar17>78</mar17>
+        <apr17>23</apr17>
+        <may17>96</may17>
+        <jun17>12</jun17>
+        <jul17>78</jul17>
+        <aug17>81</aug17>
+        <sep17>12</sep17>
+        <oct17>34</oct17>
+        <nov17>56</nov17>
+        <dec17>67</dec17>
+
+
+
+
+
+        <jan18>32</jan18>
+        <feb18>23</feb18>
+        <mar18>78</mar18>
+        <apr18>23</apr18>
+        <may18>96</may18>
+        <jun18>12</jun18>
+        <jul18>78</jul18>
+        <aug18>81</aug18>
+        <sep18>12</sep18>
+        <oct18>34</oct18>
+        <nov18>56</nov18>
+        <dec18>67</dec18>
+
+
+
+
+
+
+    </struct>
+</records>
