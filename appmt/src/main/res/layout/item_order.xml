@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white">
+        <TextView
+            android:id="@+id/proj_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:layout_marginLeft="@dimen/default_margin_left"
+            android:text="项目名称"/>
+    <TextView
+        android:id="@+id/proj_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/proj_title"
+        android:layout_marginTop="@dimen/default_margin_top"
+        android:layout_marginLeft="@dimen/text_margin_left"
+        android:textColor="@color/grey"
+        />
+
+    <TextView
+        android:id="@+id/address_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/proj_title"
+        android:layout_marginTop="@dimen/text_margin_top"
+        android:layout_marginLeft="@dimen/default_margin_left"
+        android:text="接收地址"
+        />
+        <TextView
+            android:id="@+id/address_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_margin_top"
+            android:layout_marginLeft="@dimen/text_margin_left"
+            android:layout_toRightOf="@+id/address_title"
+            android:layout_below="@+id/proj_textview"
+            android:textColor="@color/grey"
+            />
+
+
+        <TextView
+            android:id="@+id/person_titile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/address_title"
+            android:layout_marginTop="@dimen/text_margin_top"
+            android:layout_marginLeft="@dimen/default_margin_left"
+            android:text="接收人员"/>
+
+    <TextView
+        android:id="@+id/person_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/text_margin_top"
+        android:layout_marginLeft="@dimen/text_margin_left"
+        android:layout_toRightOf="@+id/person_titile"
+        android:layout_below="@+id/address_textview"
+        android:textColor="@color/grey"
+        />
+        <TextView
+            android:id="@+id/phone_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/person_titile"
+            android:layout_marginTop="@dimen/text_margin_top"
+            android:layout_marginLeft="@dimen/default_margin_left"
+            android:text="接收电话"/>
+
+    <TextView
+        android:id="@+id/phone_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/text_margin_top"
+        android:layout_marginLeft="@dimen/text_margin_left"
+        android:textColor="@color/grey"
+        android:layout_toRightOf="@+id/phone_title"
+        android:layout_below="@+id/person_textview"
+        />
+    <TextView
+        android:id="@+id/date_titile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phone_title"
+        android:layout_marginTop="@dimen/text_margin_top"
+        android:layout_marginLeft="@dimen/default_margin_left"
+        android:text="申请日期"/>
+    <TextView
+        android:id="@+id/date_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/text_margin_top"
+        android:layout_marginLeft="@dimen/text_margin_left"
+        android:textColor="@color/grey"
+        android:layout_toRightOf="@+id/date_titile"
+        android:layout_below="@+id/phone_textview"
+        />
+        <TextView
+            android:id="@+id/price_titile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/date_titile"
+            android:layout_marginTop="@dimen/text_margin_top"
+            android:layout_marginLeft="@dimen/default_margin_left"
+            android:paddingBottom="@dimen/default_margin_bottom"
+            android:text="总金额"/>
+
+
+
+        <TextView
+            android:id="@+id/price_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey"
+            android:layout_below="@+id/date_textview"
+            android:layout_toRightOf="@+id/price_titile"
+            android:layout_marginTop="@dimen/text_margin_top"
+            android:layout_marginLeft="@dimen/text_margin_left"
+            android:paddingBottom="@dimen/default_margin_bottom"
+           />
+
+</RelativeLayout>

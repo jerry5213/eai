@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zxtech.common.view.ProgressWheel
+        android:id="@+id/progress"
+        android:layout_width="110dp"
+        android:layout_height="160dp"
+        ProgressWheel:text="Loading..."
+        ProgressWheel:textColor="#fff"
+        ProgressWheel:textSize="14sp"
+        ProgressWheel:rimColor="#fff"
+        ProgressWheel:barLength="60dp"
+        ProgressWheel:barColor="#0075c2"
+        ProgressWheel:barWidth="10dp"
+        ProgressWheel:rimWidth="15dp"
+        ProgressWheel:contourSize="1px"
+        ProgressWheel:contourColor="#eeeeee"
+        ProgressWheel:spinSpeed="5dp" />
+
+</LinearLayout>

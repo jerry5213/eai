@@ -1,0 +1,56 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="default_margin_left">15dp</dimen>
+
+    <dimen name="default_margin_top">10dp</dimen>
+    <dimen name="default_margin_bottom">10dp</dimen>
+    <dimen name="default_margin_right">5dp</dimen>
+
+    <dimen name="text_margin_left">5dp</dimen>
+    <dimen name="text_margin_top">5dp</dimen>
+
+    <dimen name="standard_padding">8dip</dimen>
+    <dimen name="half_padding">4dip</dimen>
+
+
+    字号
+    <!--页面标题-->
+    <dimen name="f_page_title">16dp</dimen>
+    <!--一、二级标题-->
+    <dimen name="f_large">15dp</dimen>
+    <!--正文-->
+    <dimen name="f_middle">13dp</dimen>
+    <!--备注信息等-->
+    <dimen name="f_small">10dp</dimen>
+
+    距离
+    <!--页面上下左右边距-->
+    <dimen name="d_page">12dp</dimen>
+    <!--正文文字行间距-->
+    <dimen name="d_text">3dp</dimen>
+    <!--模块间距-->
+    <dimen name="d_modular">14dp</dimen>
+    <!--模块内间距-->
+    <dimen name="d_modular_inside">12dp</dimen>
+    <!--0.5倍模块内间距-->
+    <dimen name="d_modular_inside_0d5">6dp</dimen>
+    <!--2.0倍模块内间距-->
+    <dimen name="d_modular_inside_2d0">24dp</dimen>
+    <!--3.0倍模块内间距-->
+    <dimen name="d_modular_inside_3d0">36dp</dimen>
+
+    尺寸
+    <!--顶部导航栏高度-->
+    <dimen name="s_top_h">46dp</dimen>
+    <!--大按钮高度-->
+    <dimen name="s_button_large_h">40dp</dimen>
+    <!--顶部tab菜单按钮高度-->
+    <dimen name="s_tab_h">40dp</dimen>
+    <!--APP底部tab菜单按钮高度-->
+    <dimen name="s_menu_h">49dp</dimen>
+    <!--列表菜单高度-->
+    <dimen name="s_list_menu_h">48dp</dimen>
+</resources>

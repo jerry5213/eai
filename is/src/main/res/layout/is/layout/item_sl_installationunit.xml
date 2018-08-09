@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="7dp"
+    android:layout_marginBottom="7dp"
+
+    android:orientation="vertical"
+    android:background="@drawable/solid_white_no_border">
+
+
+    <TextView
+        android:id="@+id/is_item_team_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_weight="3"
+        android:gravity="center_vertical"
+        android:text="新力安装公司"
+        android:textColor="@color/black_28"
+        android:textSize="@dimen/large_font" />
+
+    <View
+    android:id="@+id/civil_review_line"
+    android:layout_width="match_parent"
+    android:layout_height="1px"
+    android:background="@color/line" />
+
+</LinearLayout>

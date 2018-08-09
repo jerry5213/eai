@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#eeeeee"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:id="@+id/proj_relayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="1px"
+            android:layout_weight="1"
+            android:background="@drawable/button_press_radius_selector"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/proj_title"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1px"
+                android:background="#00000000"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/project_name"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/proj_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/proj_title"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:singleLine="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/down_arrow"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/eq_relayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="1px"
+            android:layout_weight="1"
+            android:background="@drawable/button_press_radius_selector"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/eq_title"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1px"
+                android:background="#00000000"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/elevator_code"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/eq_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@+id/scan_textview"
+                android:layout_toRightOf="@id/eq_title"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:singleLine="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/down_arrow"/>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/large_relayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="1px"
+            android:layout_weight="1"
+            android:background="@drawable/button_press_radius_selector"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/large1_textview"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1px"
+                android:background="#00000000"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/area"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/large_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/large1_textview"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:singleLine="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/down_arrow"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/medium_relayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="1px"
+            android:layout_weight="1"
+            android:background="@drawable/button_press_radius_selector"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/medium1_textview"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1px"
+                android:background="#00000000"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/position"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/medium_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/medium1_textview"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:singleLine="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/down_arrow"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/small_relayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="1px"
+            android:layout_weight="1"
+            android:background="@drawable/button_press_radius_selector"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/small1_textview"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1px"
+                android:background="#00000000"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/parts"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/small_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/small1_textview"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:singleLine="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/down_arrow"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/acc_code_relayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="1px"
+            android:layout_weight="1"
+            android:background="@drawable/button_press_radius_selector"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/acc_code_title"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1px"
+                android:background="#00000000"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/part_number"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/acc_code_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/acc_code_title"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:singleLine="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/down_arrow"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/acc_name_relayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="1px"
+            android:layout_weight="1"
+            android:background="@drawable/button_press_radius_selector"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/acc_name_title"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1px"
+                android:background="#00000000"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/part_name"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/acc_name_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/acc_name_title"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:singleLine="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/acc_jiaoqi_relayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="1px"
+            android:layout_weight="1"
+            android:background="@drawable/button_press_radius_selector"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/acc_part_spec_title"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1px"
+                android:background="#00000000"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/part_spec"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/acc_part_spec_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/acc_part_spec_title"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:singleLine="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/acc_weight_relayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="1px"
+            android:layout_weight="1"
+            android:background="@drawable/button_press_radius_selector"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/acc_category_title"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1px"
+                android:background="#00000000"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/part_category"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/acc_category_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/acc_category_title"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:singleLine="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/acc_size_relayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="1px"
+            android:layout_weight="1"
+            android:background="@drawable/button_press_radius_selector"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/acc_size_title"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1px"
+                android:background="#00000000"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/store_count"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/acc_size_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/acc_size_title"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:singleLine="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/acc_model_relayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="1px"
+            android:layout_weight="1"
+            android:background="@drawable/button_press_radius_selector"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/acc_sale_pric_title"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1px"
+                android:background="#00000000"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/sale_pric"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/acc_sale_pric_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/acc_sale_pric_title"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:singleLine="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

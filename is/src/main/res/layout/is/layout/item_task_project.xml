@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="7dp"
+    android:background="@drawable/solid_white_no_border"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <LinearLayout
+        android:id="@+id/row1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/col1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/crow1"
+                style="@style/LinearLayout_horizontal"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:paddingBottom="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/shape_circle" />
+
+                    <Space
+                        android:layout_width="@dimen/dp_10"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_project_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="王屠"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="@dimen/middle_font"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/button_yellow_radius"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="2dp"
+                    android:text="已提交"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/crow2"
+                style="@style/LinearLayout_horizontal"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="辽宁省沈阳市和平区三好街80-1号"
+                    android:textColor="@color/default_text_grey_color"
+                    android:textSize="@dimen/middle_font" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/col2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <com.zxtech.is.widget.IconFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/icon_qianjin"
+                android:textSize="@dimen/middle_font" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/row1"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:paddingBottom="4dp">
+
+        <LinearLayout
+            style="@style/LinearLayout_horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/tv_plan"
+                style="@style/TextView"
+                android:gravity="center_horizontal"
+                android:text="土建复核:"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_plan1"
+                style="@style/TextView"
+                android:gravity="center_horizontal"
+                android:paddingLeft="5dp"
+                android:text="1"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LinearLayout_horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/tv_plan2"
+                style="@style/TextView"
+                android:gravity="center_horizontal"
+                android:text="土建复核:"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_plan3"
+                style="@style/TextView"
+                android:gravity="center_horizontal"
+                android:paddingLeft="5dp"
+                android:text="1"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LinearLayout_horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/tv_plan4"
+                style="@style/TextView"
+                android:gravity="center_horizontal"
+                android:text="土建复核:"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_plan5"
+                style="@style/TextView"
+                android:gravity="center_horizontal"
+                android:paddingLeft="5dp"
+                android:text="1"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LinearLayout_horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/tv_plan6"
+                style="@style/TextView"
+                android:gravity="center_horizontal"
+                android:text="土建复核:"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_plan7"
+                style="@style/TextView"
+                android:gravity="center_horizontal"
+                android:paddingLeft="5dp"
+                android:text="1"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

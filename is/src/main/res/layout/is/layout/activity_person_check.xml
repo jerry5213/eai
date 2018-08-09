@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_grey"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/is_team_1"
+        layout="@layout/common_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/is_team_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/is_team_1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/solid_white_no_border"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/left_8">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/left_8"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="@string/is_partner"
+                android:textColor="@color/black_28"
+                android:textSize="@dimen/large_font" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/left_8"
+                android:layout_weight="4"
+                android:background="@drawable/solid_white_border">
+
+                <TextView
+                    android:id="@+id/is_person_1"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="@dimen/left_8"
+                    android:layout_weight="8"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="@color/default_text_grey_color"
+                    android:textSize="@dimen/large_font" />
+
+
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:gravity="right"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="2">
+
+                    <ImageView
+                        android:id="@+id/is_person_10"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:visibility="invisible"
+
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_close" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/left_8">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/left_8"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="@string/is_project_name"
+                android:textColor="@color/black_28"
+                android:textSize="@dimen/large_font" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/left_8"
+                android:layout_weight="4"
+                android:background="@drawable/solid_white_border">
+
+                <TextView
+                    android:id="@+id/is_person_2"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="@dimen/left_8"
+                    android:layout_weight="8"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="@color/default_text_grey_color"
+                    android:textSize="@dimen/large_font" />
+
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:gravity="right"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="2">
+
+                    <ImageView
+                        android:visibility="invisible"
+
+                        android:id="@+id/is_person_9"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_close" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/left_8"
+            android:layout_marginBottom="@dimen/left_8">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/left_8"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="@string/is_idcard_no"
+                android:textColor="@color/black_28"
+                android:textSize="@dimen/large_font" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/left_8"
+                android:layout_weight="4"
+                android:background="@drawable/solid_white_border">
+
+                <EditText
+                    android:id="@+id/is_person_7"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="8"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/default_text_grey_color"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:textSize="@dimen/large_font" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:gravity="right"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="2">
+
+                    <ImageView
+                        android:id="@+id/is_person_6"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/is_search_button_grey" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/is_team_4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/is_team_3"
+        android:background="@color/main_grey">
+        >
+
+        <ImageView
+            android:id="@+id/rv_4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/is_elevator_team_confirm" />
+
+
+        <TextView
+            android:id="@+id/rv_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/rv_4"
+            android:gravity="center_vertical"
+            android:text="@string/is_team_num"
+            android:textSize="@dimen/large_font"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/rv_7"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/is_add_red" />
+    </RelativeLayout>
+
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:id="@+id/rl_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/is_team_4">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/is_person_5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:scrollbars="none"
+            tools:listitem="@layout/item_person_check_member" />
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+</RelativeLayout>

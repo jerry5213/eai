@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="@color/white">
+        <TextView
+            android:id="@+id/agree_textview"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textColor="@color/bg_blue"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/proj_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/agree_textview"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:layout_marginLeft="10dp"
+            android:text="@string/project_name"/>
+
+            <TextView
+                android:id="@+id/p_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/proj_title"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:layout_marginLeft="@dimen/text_margin_left"
+                android:textColor="@color/grey"
+                />
+            <TextView
+                android:id="@+id/date_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/agree_textview"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/proj_title"
+                android:layout_marginTop="@dimen/text_margin_top"
+                android:paddingBottom="10dp"
+                android:textColor="@color/grey"
+                android:text="2015-01-01"
+                />
+            <TextView
+                android:id="@+id/time_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/date_textview"
+                android:layout_marginTop="@dimen/text_margin_top"
+                android:layout_marginLeft="@dimen/text_margin_left"
+                android:paddingBottom="10dp"
+                android:layout_below="@+id/proj_title"
+                android:textColor="@color/grey"
+                android:text="分"
+                />
+            <TextView
+                android:id="@+id/produce_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="10dp"
+                android:paddingRight="@dimen/text_margin_left"
+                android:text=""/>
+
+
+</RelativeLayout>

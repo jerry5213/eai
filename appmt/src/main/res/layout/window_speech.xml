@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:DoubleWaveView="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_gray"
+    android:layout_height="400dp">
+
+    <TextView
+        android:id="@+id/speech_content_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/colorBlue"
+        android:textSize="26sp"
+        />
+
+    <com.doublewave.DoubleWaveView
+        android:id="@+id/waveView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        DoubleWaveView:speedOne="8"
+        DoubleWaveView:speedTwo="6"
+        DoubleWaveView:peakValue="20dp"
+        DoubleWaveView:waveHeight="200dp"
+        DoubleWaveView:waveColor="@color/colorBlue"/>
+
+</LinearLayout>

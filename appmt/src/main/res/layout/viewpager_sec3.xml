@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <!-- <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:paddingLeft="10dp"
+         android:paddingBottom="10dp"
+         android:paddingTop="10dp"
+         android:background="@color/bg_gray"
+         android:text="优先检查项"/>
+     <LinearLayout
+         android:id="@+id/priority_item_layout"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="20dp"
+         android:orientation="vertical">
+
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="5dp"
+             android:layout_marginBottom="5dp"
+             android:text="P-01	员工是否持有政府上岗证"/>
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="5dp"
+             android:layout_marginBottom="5dp"
+             android:text="P-02	员工是否正确有效设置防护拦"/>
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="5dp"
+             android:layout_marginBottom="5dp"
+             android:text="P-03	现场是否正确使用安全手套"/>
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="5dp"
+             android:layout_marginBottom="5dp"
+             android:text="P-04	现场是否使用JHA/危险扫描"/>
+
+         </LinearLayout>-->
+
+
+    <ListView
+        android:id="@+id/item_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:cacheColorHint="#00000000"
+        android:divider="#6e6e6e"
+        android:dividerHeight="1px"
+        android:listSelector="#00000000" />
+
+
+</LinearLayout>

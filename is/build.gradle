@@ -1,0 +1,142 @@
+if (isModule.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.2"
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 24
+        multiDexEnabled true //Dalvik当初设计单个DEX最多可以存放65536方法的ID，所以如果方法数过多就会出现这个问题
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [ moduleName : project.getName() ]
+            }
+        }
+    }
+
+    dexOptions {
+        jumboMode true //忽略超过65536的检查
+    }
+
+//添加PDF依赖导致和rxjava属性文件冲突
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+//跳过png文件检查
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+
+    repositories {
+        flatDir {
+            dirs 'aars'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            res.srcDirs = ['src/main/res','src/main/res/layout/is']
+
+            if (isModule.toBoolean()) {
+                manifest.srcFile 'src/main/module/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+                //集成开发模式下排除debug文件夹中的所有Java文件
+                java {
+                    exclude 'debug*//**'
+                }
+            }
+        }
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    flavorDimensions "default"
+    productFlavors {
+        standard {
+            dimension "default"
+            buildConfigField "String", "BASE_URL", '"http://118.190.202.234:55002/"'
+            buildConfigField "String", "BASE_URL_FOR_LOGIN", '"http://118.190.202.234:55001/"'
+        }
+
+        beta {
+            dimension "default"
+            buildConfigField "String", "BASE_URL", '"http://118.190.202.234:55002/"'
+            buildConfigField "String", "BASE_URL_FOR_LOGIN", '"http://118.190.202.234:55001/"'
+        }
+        bf {
+            dimension "default"
+            buildConfigField "String", "BASE_URL", '"http://118.190.202.234:55002/"'
+            buildConfigField "String", "BASE_URL_FOR_LOGIN", '"http://118.190.202.234:55001/"'
+        }
+        mnk {
+            dimension "default"
+            buildConfigField "String", "BASE_URL", '"http://mnk-eai.5000m.com:2603/mobileapi/mobile/"'
+            buildConfigField "String", "BASE_URL_FOR_LOGIN", '"http://172.16.4.22:55001/"'
+        }
+        local {
+            dimension "default"
+            buildConfigField "String", "BASE_URL", '"http://172.16.4.170:8080/"'
+            buildConfigField "String", "BASE_URL_FOR_LOGIN", '"http://118.190.202.234:55001/"'
+        }
+    }
+}
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+
+dependencies {
+//    compile fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':lib_common')
+    compile project(':scormplugin')
+
+//fragmentation
+    compile "me.yokeyword:fragmentation:$rootProject.fragmentationVersion"
+//Butterknife(Android系统的View、Resource、Action注入框架)
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+
+// RxJava
+    compile 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'// 大神写的这个库可以支持到rxjava2.X
+//图片轮转
+    compile 'cn.bingoogolapple:bga-banner:2.2.1@aar'
+
+//item delete
+    compile 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+//bottom-navigation
+    compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.4'
+
+//spinner
+    compile 'com.jaredrummler:material-spinner:1.0.5'
+
+//下载
+   // compile 'com.github.JiangAndroidwork:RetrofitOfRxJava:v2.4'
+
+
+//calendarview
+    compile 'com.haibin:calendarview:3.2.9'
+
+    annotationProcessor deps.butterknife_compiler
+    annotationProcessor deps.arouter_compiler
+}

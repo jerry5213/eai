@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:scaleType="fitXY" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.2"
+        android:background="@android:color/white" />
+    <RelativeLayout
+        android:id="@+id/course_head"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:background="@mipmap/toolbar_background"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="50dp"
+            android:layout_height="@dimen/title_height"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_text_size_16"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_text_size_20"
+            />
+    </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_below="@id/course_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorColor="@color/text_color_gray_light"
+        app:tabSelectedTextColor="@color/default_text_black_color"
+        app:tabTextColor="@android:color/darker_gray"
+        app:tabMode="fixed"
+        app:tabTextAppearance="@style/MyTabLayoutStyle"
+        >
+
+    </android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_below="@id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

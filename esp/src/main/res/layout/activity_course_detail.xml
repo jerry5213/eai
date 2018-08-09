@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:scaleType="fitXY"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.1"
+        android:background="@android:color/white" />
+
+    <RelativeLayout
+        android:id="@+id/course_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/toolbar_background"
+        android:fitsSystemWindows="true">
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_text_size_16" />
+
+        <com.zxtech.common.view.AlwaysMarqueeTextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/title_text_size_20"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tv_play"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@id/course_head"
+        android:text="Play">
+
+        <ImageView
+            android:id="@+id/iv_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.2"
+            android:background="@android:color/black" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/img_play" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/l_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_play"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/introduction"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/tv_publish_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/publish_time"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tv_write"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/l_layout"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_weight="8"
+            android:background="@drawable/circle_corner_button_fill_gray"
+            android:padding="3dp">
+
+            <TextView
+                android:id="@+id/tv_pen"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/et_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/leave_comment"
+                android:maxLength="100"
+                android:paddingLeft="10dp"
+                android:textColor="@color/default_text_black_color"
+                android:textColorHint="#e1dfdf"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_up"
+            android:layout_width="25dp"
+            android:layout_height="31dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:paddingRight="10dp"
+            android:textColor="@color/default_text_black_color"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_write"
+        android:divider="@android:color/transparent"
+        android:transcriptMode="normal"></ListView>
+
+</RelativeLayout>

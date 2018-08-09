@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">ECS</string>
+
+    <string name="clear">Clear</string>
+    <string name="confirm">Confirm</string>
+
+    <string name="input">参数规格</string>
+    <string name="ele_type">电梯类型</string>
+    <string name="mr_type">有无机房</string>
+    <string name="hw">井道宽度</string>
+    <string name="hd">井道深度</string>
+    <string name="floors">楼层数</string>
+    <string name="equipment_price">设备价格</string>
+    <string name="price_setting">激活价格</string>
+    <string name="function">倾向性选择</string>
+    <string name="mr">有</string>
+    <string name="mrl">无</string>
+    <string name="low">低</string>
+    <string name="low_medium">中低</string>
+    <string name="medium">中</string>
+    <string name="medium_high">中高</string>
+    <string name="high">高</string>
+    <string name="ride_quality">舒适</string>
+    <string name="traffic_efficiency">功能</string>
+    <string name="energy_efficiency">美观</string>
+    <string name="aesthetic">服务</string>
+    <string name="safety_configuration">安全</string>
+    <string name="price">价格</string>
+    <string name="delivery">交付周期</string>
+    <string name="major">基础参数</string>
+    <string name="load">额定载重kg</string>
+    <string name="speed">额定速度m/s</string>
+    <string name="ride">舒适度</string>
+
+    <string name="driver_service">司机服务</string>
+
+    <string name="icon_qianjin">&#xe61a;</string>
+    <string name="icon_account">&#xe63a;</string>
+    <string name="icon_password">&#xe60c;</string>
+    <string name="icon_zhe_die_open">&#xe614;</string>
+    <string name="icon_zhe_die_close">&#xe6a0;</string>
+    <string name="icon_more">&#xe628;</string>
+
+    <!--qms-->
+    <string name="current_version">Current Version</string>
+    <string name="language_setting">Language Setting</string>
+    <string name="voice_setting">Voice Announcements</string>
+    <string name="english">English</string>
+    <string name="chinese">Chinese</string>
+    <string name="label_system_setting">System Setting</string>
+    <string name="rename">Rename</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="nav_home">主页</string>
+    <string name="nav_tool">工具</string>
+    <string name="nav_bi">BI</string>
+    <string name="nav_me">我的</string>
+    <string name="exit_hint">退出</string>
+
+    <string name="tracking">Tracking</string>
+
+    <string name="project_application">Project Apply</string>
+    <string name="project_approval">Approve Project</string>
+    <string name="quotatoin_applicatoin">New Quotation</string>
+    <string name="quotatoin_approval">Approve Quote</string>
+    <string name="contract_apply">Contract Apply</string>
+    <string name="contract_review">Contract Review</string>
+    <string name="tt1">Layout Re-check</string>
+    <string name="tt2">Contract</string>
+    <string name="tt3">Tracking</string>
+    <string name="tt4">Shipping Status</string>
+    <string name="tt5">Installation Status</string>
+    <string name="tt6">Equipment Testing</string>
+    <string name="tt7">Pre-Delivery Inspection</string>
+    <string name="tt8">Official Inspection</string>
+    <string name="tt9">Installation Completion</string>
+    <string name="Completed">Completed</string>
+    <string name="In_Process">In Process</string>
+    <string name="Not_Processed">Not Processed</string>
+
+
+</resources>

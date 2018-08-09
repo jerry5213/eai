@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_margin="7dp"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@drawable/solid_white_no_border">
+
+
+    <ImageView
+        android:id="@+id/is_item_person_1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:focusable="false"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/is_item_person_2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="left|center"
+        android:text="张宇飞"
+        android:textColor="@color/black_28"
+        android:textSize="@dimen/large_font"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/is_item_person_3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:gravity="left|center"
+        android:text="（安装工）"
+        android:textColor="@color/default_text_grey_color" />
+    <TextView
+        android:id="@+id/is_item_person_4"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:gravity="left|center"
+        android:text="黑名单"
+        android:textColor="@color/default_text_grey_color" />
+
+</LinearLayout>

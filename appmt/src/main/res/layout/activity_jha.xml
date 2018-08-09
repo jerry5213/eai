@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/top_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:background="#eeeeee">
+
+        <TextView
+            android:id="@+id/title1_textview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/solid_bule_border_left"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/jha_area_1"/>
+
+
+        <TextView
+            android:id="@+id/title2_textview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/solid_white_border_center"
+            android:textColor="@color/grey"
+            android:layout_marginBottom="10dp"
+            android:text="@string/jha_area_2"/>
+
+
+        <TextView
+            android:id="@+id/title3_textview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/solid_white_border_right"
+            android:textColor="@color/grey"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/jha_area_3"/>
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/type_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:dividerHeight="1px"
+        android:divider="@color/grey">
+
+
+
+        </ListView>
+
+    <EditText
+        android:id="@+id/fpa_desc_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_round_border"
+        android:paddingLeft="3dp"
+        android:gravity="top"
+        android:maxLength="150"
+        android:hint="@string/jha_desc_1"
+        android:textSize="13sp"/>
+
+    <EditText
+        android:id="@+id/control_desc_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_round_border"
+        android:paddingLeft="3dp"
+        android:gravity="top"
+        android:maxLength="150"
+        android:hint="@string/jha_desc_2"
+        android:textSize="13sp"/>
+
+
+
+
+
+
+
+</LinearLayout>

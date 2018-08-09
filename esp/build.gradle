@@ -1,0 +1,106 @@
+if (isModule.toBoolean()) {
+    apply plugin: 'com.android.application'
+    apply plugin: 'com.jakewharton.butterknife'
+} else {
+    apply plugin: 'com.android.library'
+    apply plugin: 'com.jakewharton.butterknife'
+}
+
+
+android {
+    compileSdkVersion build_versions.target_sdk
+
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        multiDexEnabled true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [ moduleName : project.getName() ]
+            }
+        }
+    }
+
+    dexOptions {
+        jumboMode true
+        javaMaxHeapSize "4g"
+    }
+
+    /*buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+        }
+        release {
+            signingConfig signingConfigs.release
+        }
+    }*/
+
+    repositories {
+        flatDir {
+            dirs 'aars'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            if (isModule.toBoolean()) {
+                manifest.srcFile 'src/main/module/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+                //集成开发模式下排除debug文件夹中的所有Java文件
+                java {
+                    exclude 'debug*//**'
+                }
+            }
+        }
+    }
+
+    //apk命名
+    /*android.applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def oldFile = output.outputFile
+            def newFileName = 'etp_v' + versionName + '('+versionCode+')_' + variant.productFlavors.name[0] + '.apk'
+            output.outputFile = new File(oldFile.parent, newFileName)
+        }
+    }*/
+
+    //渠道分包
+    /*productFlavors {
+        official {
+            resValue("string", "product", "official")
+            manifestPlaceholders = [APP_ID    : APP_ID_OFFICIAL,
+                                    GD_MAP_KEY: GD_MAP_KEY_OFFICIAL,
+                                    BD_MTJ_KEY: BD_MTJ_KEY,
+                                    APP_NAME: APP_NAME_OFFICIAL
+            ]
+
+        }
+        beta {
+            resValue("string", "product", "beta")
+            manifestPlaceholders = [APP_ID    : APP_ID_BETA,
+                                    GD_MAP_KEY: GD_MAP_KEY_BETA,
+                                    BD_MTJ_KEY: BD_MTJ_KEY,
+                                    APP_NAME: APP_NAME_BETA
+            ]
+        }
+    }*/
+}
+
+dependencies {
+    //compile fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':lib_common')
+
+    provided files('libs/universal-image-loader-1.9.5.jar')
+    implementation(name: 'g_api_http-v1.0.0-release', ext: 'aar')
+    implementation(name: 'g_api_adapter-v1.0.0-release', ext: 'aar')
+    compile 'com.contrarywind:Android-PickerView:3.2.5'
+    compile 'cn.finalteam:galleryfinal:1.4.8.7'
+    compile 'com.youth.banner:banner:1.4.9'
+    compile 'com.wonderkiln:camerakit:0.13.1'
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    //Butterknife
+    annotationProcessor deps.butterknife_compiler
+    annotationProcessor deps.arouter_compiler
+    compile project(':scormplugin')
+}

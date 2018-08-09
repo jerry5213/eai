@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebeb"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/main_grey"/>
+
+    <LinearLayout
+        style="@style/LinearLayout_vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp">
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/is_file_orange"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="7dp"
+                android:textSize="@dimen/large_font"
+                android:textStyle="bold"
+                android:text="@string/is_elevator_attach"/>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:background="@drawable/solid_white_no_border">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_is_elevator_attach"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                tools:listitem="@layout/item_is_img">
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp">
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/is_address_green"/>
+            <TextView
+                style="@style/TextView"
+                android:layout_marginLeft="7dp"
+                android:text="@string/is_delivery_address"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/large_font"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/solid_white_no_border"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/left_8"
+                    android:textSize="@dimen/large_font"
+                    android:text="@string/is_elevator_belong_area"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"/>
+
+                <TextView
+                    android:id="@+id/tv_is_location_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/left_8"
+                    android:padding="5dp"
+                    android:textColor="@color/default_text_grey_color"
+                    android:textSize="@dimen/large_font"
+                    android:text=""
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/left_8"
+                    android:textSize="@dimen/large_font"
+                    android:text="@string/is_elevator_address_detail"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"/>
+
+                <TextView
+                    android:id="@+id/tv_is_other_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/left_8"
+                    android:padding="5dp"
+                    android:textColor="@color/default_text_grey_color"
+                    android:textSize="@dimen/large_font"
+                    android:text=""
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp">
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/is_address_blue"/>
+            <TextView
+                style="@style/TextView"
+                android:layout_marginLeft="7dp"
+                android:text="@string/is_install_address"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/large_font"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:background="@drawable/solid_white_no_border"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/left_8"
+                    android:textSize="@dimen/large_font"
+                    android:text="@string/is_elevator_belong_area"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"/>
+
+                <TextView
+                    android:id="@+id/tv_is_install_location_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/left_8"
+                    android:padding="5dp"
+                    android:textColor="@color/default_text_grey_color"
+                    android:textSize="@dimen/large_font"
+                    android:text=""
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/left_8"
+                    android:textSize="@dimen/large_font"
+                    android:text="@string/is_elevator_address_detail"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"/>
+
+                <TextView
+                    android:id="@+id/tv_is_install_other_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/left_8"
+                    android:padding="5dp"
+                    android:textColor="@color/default_text_grey_color"
+                    android:textSize="@dimen/large_font"
+                    android:text=""
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10">
+
+            <ImageView
+                android:id="@+id/iv_is_address_img"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/is_contact_orange"/>
+            <TextView
+                android:id="@+id/tv_is_contact_txt"
+                android:layout_toRightOf="@+id/iv_is_address_img"
+                style="@style/TextView"
+                android:layout_marginLeft="7dp"
+                android:text="@string/is_contact"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/large_font"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:id="@+id/rv_is_contact_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:background="@drawable/solid_white_no_border"
+            android:scrollbars="vertical">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_is_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                tools:listitem="@layout/item_contact_review"
+                >
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+            <Button
+                android:id="@+id/is_abolished"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_weight="4"
+                android:background="@drawable/solid_grey_border"
+                android:gravity="center"
+                android:text="@string/is_abolished"
+                android:textColor="@color/white"
+                android:textSize="@dimen/large_font" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

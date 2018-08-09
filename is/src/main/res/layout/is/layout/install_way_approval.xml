@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_grey"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_10">
+
+        <ImageView
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:background="@drawable/pm" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="@string/is_project_info"
+            android:textSize="@dimen/sp_15"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@drawable/solid_white_no_border"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_10"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:gravity="top">
+
+            <TextView
+                android:layout_width="@dimen/dp_72"
+                android:layout_height="wrap_content"
+                android:text="@string/is_project_name"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/is_project_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:text=""
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity ="top"
+            android:layout_marginBottom="@dimen/dp_10">
+
+            <TextView
+                android:layout_width="@dimen/dp_72"
+                android:layout_height="wrap_content"
+                android:text="@string/is_project_address"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/is_project_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:text=""
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:layout_marginBottom="@dimen/dp_10">
+
+            <TextView
+                android:layout_width="@dimen/dp_72"
+                android:layout_height="wrap_content"
+                android:text="@string/is_agency"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/is_agency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top">
+
+            <TextView
+                android:layout_width="@dimen/dp_72"
+                android:layout_height="wrap_content"
+                android:text="@string/is_product_units"
+                android:textColor="@color/default_text_black_color"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/is_product_units"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:text=""
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:id="@+id/is_check_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:button="@drawable/is_checkbox_style"
+                android:checked="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="全选" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/is_team_6"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true">
+                <Button
+                    android:id="@+id/is_pass"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="4"
+                    android:background="@drawable/solid_red_no_border"
+                    android:gravity="center"
+                    android:text="@string/is_pass"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/large_font" />
+            <Button
+                android:id="@+id/is_rejected"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_weight="4"
+                android:background="@drawable/solid_grey_border"
+                android:gravity="center"
+                android:text="@string/is_rejected"
+                android:textColor="@color/white"
+                android:textSize="@dimen/large_font" />
+            </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/civil_review_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        tools:listitem="@layout/install_way_records_rv" />
+</LinearLayout>

@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+   <!-- <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="#FFFFFF">
+
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            app:mcv_selectionColor="@color/c_theme"
+            app:mcv_calendarMode="week"
+
+             />
+
+    </LinearLayout>-->
+
+    <RelativeLayout
+        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp">
+        <TextView
+            android:id="@+id/week_textview"
+            android:layout_width="50dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="@string/week_"
+            android:background="@drawable/button_blue_radius"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/white"
+            android:layout_marginLeft="15dp"
+            android:textSize="12sp"
+            android:padding="6dp"/>
+        <TextView
+            android:id="@+id/calendar_title"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/today_textview"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="@string/today_"
+            android:gravity="center"
+            android:background="@drawable/button_blue_radius"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_marginRight="15dp"
+            android:padding="6dp"/>
+    </RelativeLayout>
+    <include layout="@layout/layout_week_num" />
+
+    <RelativeLayout
+        android:id="@+id/calendar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+
+        android:background="@color/white">
+        <com.necer.ncalendar.calendar.MWCalendar
+            android:id="@+id/mWCalendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:calendarHeight="250dp"
+            app:duration="500"
+            app:isMultiple="false"
+            app:selectCircleColor="@color/bg_blue">
+
+           <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.necer.ncalendar.calendar.MWCalendar>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/c_background">
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        >
+        <TextView
+            android:id="@+id/go_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="@dimen/default_margin_left"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:background="@drawable/blue_circle"
+            android:gravity="center"
+            android:text="@string/up"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/go_work_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin_bottom"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:layout_toRightOf="@+id/go_icon"
+            android:textSize="17sp"
+            android:text="@string/clock_in_time" />
+
+        <TextView
+            android:id="@+id/go_work_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/text_margin_left"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:textSize="17sp"
+            android:layout_toRightOf="@+id/go_work_title"
+            />
+        <com.zxtech.mt.widget.FontTextView
+            android:id="@+id/start_location_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/c_gray_2"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:layout_marginLeft="@dimen/default_margin_bottom"
+            android:layout_below="@+id/go_work_title"
+            android:layout_toRightOf="@+id/go_icon"
+            android:text="&#xe651;"/>
+        <TextView
+            android:id="@+id/start_work_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/go_work_title"
+            android:layout_toRightOf="@+id/start_location_icon"
+            android:layout_marginLeft="@dimen/default_margin_bottom"
+            android:textSize="17sp"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:text=""
+            android:textColor="@color/grey" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        >
+        <TextView
+            android:id="@+id/up_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="@dimen/default_margin_left"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:background="@drawable/grey_circle"
+            android:gravity="center"
+            android:text="@string/down"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/up_work_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin_bottom"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:layout_toRightOf="@+id/up_icon"
+            android:textSize="17sp"
+            android:text="@string/clock_in_time" />
+
+        <TextView
+            android:id="@+id/up_work_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/text_margin_left"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:textSize="17sp"
+            android:layout_toRightOf="@+id/up_work_title" />
+
+        <com.zxtech.mt.widget.FontTextView
+            android:id="@+id/up_location_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/c_gray_2"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:layout_marginLeft="@dimen/default_margin_bottom"
+            android:layout_below="@+id/up_work_title"
+            android:layout_toRightOf="@+id/up_icon"
+            android:text="&#xe651;"/>
+
+        <TextView
+            android:id="@+id/end_work_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/up_icon"
+            android:layout_toRightOf="@+id/up_location_icon"
+            android:layout_marginLeft="@dimen/default_margin_bottom"
+            android:paddingBottom="10dp"
+            android:textSize="17sp"
+            android:textColor="@color/grey"
+            android:text=""/>
+    </RelativeLayout>
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/c_background"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/clock_outside_border">
+
+            <TextView
+                android:id="@+id/clock1_textview"
+                android:layout_width="135dp"
+                android:layout_height="135dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/round_press_radius_selector"
+                android:gravity="center"
+                android:text="@string/clock"
+                android:textSize="20dp"
+                android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <com.zxtech.mt.widget.FontTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/bg_blue"
+                    android:text="&#xe651;"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/current_address"/>
+
+                <TextView
+                    android:id="@+id/last_address_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

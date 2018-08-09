@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#000000"
+    android:orientation="vertical">
+
+    <uk.co.senab.photoview.PhotoView
+        android:id="@+id/large_photoview"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:src="@drawable/default_image"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/edit_sign_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sign_edit_border"
+        android:layout_marginBottom="15dp"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:text="@string/modify_autograph"/>
+
+</LinearLayout>

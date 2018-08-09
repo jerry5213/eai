@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="dkgray">#ff444444</color>
+    <color name="blue">#ff75a6ff</color>
+    <color name="deep_blue">#0066FF</color>
+    <color name="red">#ffE1423C</color>
+    <color name="translucence">#506050</color>
+    <color name="bg_gray">#E6E9ED</color>
+    <!--<color name="bg_blue">#0075c2</color>-->
+    <color name="bg_blue">#f91f1d</color>
+    <color name="green">#65e17b</color>
+    <color name="tr">#00000000</color>
+    <color name="grey">#6e6e6e</color>
+    <color name="deep_grey">#eeeeee</color>
+
+    <color name="red_500">#e51c23</color>
+
+    <color name="blue_500">#5677fc</color>
+
+    <color name="teal_500">#009688</color>
+    <color name="orange_500">#ff9800</color>
+
+
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="possible_result_points">#c0ffbd21</color> <!-- Android standard ICS color -->
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c099cc00</color> <!-- Android standard ICS color -->
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="viewfinder_laser">#ffcc0000</color> <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="theme_body">#cc22292c</color>
+    <color name="status_bar">#303135</color>
+    <color name="top_bar">#9f556061</color>
+    <color name="transparent">#00000000</color>
+
+    颜色
+    <!--主题色-->
+    <color name="c_theme1">#007AFF</color>
+    <color name="c_theme">#0075c2</color>
+    <!--页面背景色-->
+    <color name="c_background">#EFEFEF</color>
+    <!--分割线颜色-->
+    <color name="c_divider">#C8C8C8</color>
+    <!--文字深灰色-->
+    <color name="c_gray_1">#525252</color>
+    <!--文字浅灰色-->
+    <color name="c_gray_2">#808080</color>
+
+    <color name="black_28">#282828</color>
+    <color name="main">#f91f1d</color>
+
+
+</resources>

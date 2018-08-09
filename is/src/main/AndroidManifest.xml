@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zxtech.is">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 震动权限 -->
+    <uses-feature android:name="android.hardware.camera" /> <!-- 使用照相机权限 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <!-- 自动聚焦权限 -->
+    <application
+        android:supportsRtl="true"
+        android:theme="@style/BaseTheme"
+        >
+
+        <activity android:name=".ui.login.LoginActivity">
+        </activity>
+
+        <activity
+            android:name=".ui.taskme.activity.TaskMeTemporaryTaskAddActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_temporary_assignment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".IsMainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label=""
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".ui.task.activity.S1TaskDetailActivity" />
+
+        <activity
+            android:name=".ui.task.activity.TaskListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_task"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.task.activity.ElevatorTaskListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_task"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.project.activity.ProjectManageListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_activity_project_manage"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.taskme.activity.TaskMeListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_task"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".ui.check.activity.QualityCheckActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_quality_check"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.check.activity.SecurityCheckActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_security_check"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".ui.transport.activity.TransportActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_production_shipment"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".ui.taskme.activity.ScheduleManageListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_installation_inter"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".ui.team.activity.ElevatorTeamActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_citem_assigned"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.team.activity.ElevatorTeamChangeMembersActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_team_assigne_person"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.person.activity.PersonCheckActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_temporary_task_problem_user"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".ui.person.activity.PersonCheckDetailedActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_temporary_task_problem_user"
+            android:screenOrientation="portrait"></activity>
+
+
+
+
+        <activity
+            android:name=".ui.task.activity.S1TaskListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_s1_task"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.task.activity.ShowBigImageSimpleActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_big_image"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.task.activity.S1TaskReviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_task_review"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <activity
+            android:name=".ui.task.activity.S1ElevatorDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_elevator_detail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".ui.task.activity.S1ElevatorDetailReviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_elevator_detail"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.project.activity.ProjectItemAssignedActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_task"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.project.activity.ProjectItemAssignedConfirmActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_item_assigned"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.install.activity.InstallActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_installation_inter"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.taskquestion.activity.TaskQuestionActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_taskquestion"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".ui.Engineer.activity.EngineerActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_civil_review"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.workflow.activity.TaskHistoryListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_task_history"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.smt.activity.ProjectInstaWayRecordsApprovalActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_task"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.smt.activity.ProjectInstaWayRecordsConfirmActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_insta_way_records"
+            android:screenOrientation="portrait" />
+
+        <!--fileProvider-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <!--元数据-->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".ui.team.activity.ElaTeamAddPersonActivity"
+            android:label="@string/is_add_person"
+            ></activity>
+
+        <activity
+            android:name=".ui.task.activity.S2TaskListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_s2_task"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.task.activity.S2TaskReviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_task_S2_review"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <activity
+            android:name=".ui.task.activity.S2ElevatorDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_elevator_detail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <activity
+            android:name=".ui.task.activity.S2ElevatorDetailReviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_elevator_detail"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.task.activity.S3TaskListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_s3_task"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.task.activity.S3TaskReviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_task_S3_review"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <activity
+            android:name=".ui.task.activity.S3ElevatorDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_elevator_detail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
+        <activity
+            android:name=".ui.task.activity.S3ElevatorDetailReviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_elevator_detail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.Engineer.activity.CommittedTaskDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/is_elevator_detail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".ui.team.activity.ElevatorTeamTemplateActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="新建班组"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".ui.mt.activity.MtProjectManageListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="项目追踪"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".ui.mt.activity.MtProjectProcessActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="项目追踪"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".ui.mt.activity.MtProjectProcessItemActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="项目信息"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+    </application>
+
+</manifest>

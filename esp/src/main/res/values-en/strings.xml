@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ETP</string>
+
+    <!-- Strings related to login -->
+    <string name="platform_name">Elevator Training Platform</string>
+    <string name="login_account">Account</string>
+    <string name="login_password">Password</string>
+    <string name="action_sign_in_short">Sign In</string>
+    <string name="action_register">Join free now!</string>
+    <string name="error_blank_password">Account or password can not be blank</string>
+
+    <!-- Strings related to upgrade dialog -->
+    <string name="upgrade_dialog_desc">It is not the latest version, update or not?</string>
+    <string name="upgrade_dialog_ok">OK</string>
+    <string name="upgrade_dialog_cancel">Cancel</string>
+
+    <!-- Strings related to register -->
+    <string name="register_login_name">Account</string>
+    <string name="register_real_name">Name</string>
+    <string name="register_nickname">Nickname</string>
+    <string name="register_login_pwd">Password</string>
+    <string name="register_text">Register</string>
+
+    <!-- Strings related to title bar text -->
+    <string name="home">Course Market</string>
+    <string name="owner">Personal Center</string>
+
+    <string name="ranking">Ranking</string>
+    <string name="test">Test</string>
+    <string name="study">Study</string>
+    <string name="my_news">My News</string>
+    <string name="avatar">Avatar</string>
+    <string name="my_ranking">My Ranking</string>
+    <string name="tested">tested</string>
+    <string name="untested">untested</string>
+    <string name="introduction">Introduction:</string>
+    <string name="issue">Release</string>
+    <string name="publish_time">Release Time:</string>
+    <string name="type">Type</string>
+    <string name="leave_comment">Write Comment</string>
+    <string name="select_a_photo_from_album">Select a picture from album</string>
+    <string name="take_a_photo">Take a picture</string>
+    <string name="remaining_time">Remaining Time:</string>
+    <string name="test_paper_submission">Submit Test Paper</string>
+    <string name="test_result">Test Result:</string>
+    <string name="used_time">Used Time:</string>
+    <string name="exit">Exit</string>
+    <string name="question_analysis">Question Analysis</string>
+    <string name="errors">Errors:</string>
+    <string name="download">Download</string>
+    <string name="if_download">Download?</string>
+    <string name="downloading">Downloading...</string>
+    <string name="complete">Complete</string>
+    <string name="failed">Failed</string>
+    <string name="invalid_download_address">Invalid download address</string>
+    <string name="tip">Tips</string>
+    <string name="save">Save</string>
+    <string name="new_pwd">New : </string>
+    <string name="confirm">Confirm : </string>
+    <string name="create">Create</string>
+    <string name="title">Title</string>
+    <string name="content">Content</string>
+    <string name="minute">min</string>
+    <string name="wait">Wait</string>
+    <string name="miss">Miss</string>
+    <string name="if_exam">Whether to start the test?</string>
+    <string name="expired">The test has expired.</string>
+    <string name="not_started">The test has not started.</string>
+    <string name="back">Back</string>
+    <string name="password_empty">The two password input is inconsistent.</string>
+    <string name="nothing">Nothing</string>
+    <string name="course_ware_nothing">Courseware does not exist, whether to download?</string>
+    <string name="send">Send</string>
+    <string name="Sort">Sort:</string>
+
+    <!-- Strings related to toast -->
+    <string name="toast_upgrade_t1">Please continue using after the software update is complete.</string>
+    <string name="toast_upgrade_t2">You must install a new version before you can use it.</string>
+
+    <!-- Strings related to common -->
+    <string name="no_item">No data</string>
+
+    <string name="post_delete_tv_d">Drag to this point to delete</string>
+    <string name="post_delete_tv_s">You can remove it</string>
+    <string name="company">Company</string>
+    <string name="telephone">Tel</string>
+    <string name="course_language">Course Language</string>
+    <string name="face_info">Face Info</string>
+    <string name="face_has_record">已录入</string>
+    <string name="face_no_record">未录入</string>
+    <string name="etp_home">Course Market</string>
+    <string name="etp_bbs">论坛</string>
+    <string name="downloaded">已下载：</string>
+    <string name="cancel">取消下载</string>
+</resources>

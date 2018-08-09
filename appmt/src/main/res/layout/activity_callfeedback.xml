@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/feedback_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@color/grey"
+        android:dividerHeight="1px"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin_top"
+        android:paddingLeft="@dimen/text_margin_left"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:background="@color/c_background"
+        android:text="@string/property_sign"/>
+
+    <ImageView
+        android:id="@+id/sign_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:layout_gravity="center"
+        android:scaleType="center"/>
+
+
+</LinearLayout>

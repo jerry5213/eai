@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="AppBaseTheme19" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+</resources>

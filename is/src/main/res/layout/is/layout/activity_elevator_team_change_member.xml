@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_grey"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/is_team_1"
+        layout="@layout/common_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/is_team_2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/is_team_1">
+
+        <ImageView
+            android:id="@+id/rv_1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/rv_3"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/is_elevator_team_red" />
+
+
+        <TextView
+            android:id="@+id/rv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/rv_1"
+            android:gravity="center_vertical"
+            android:text="班组分配"
+            android:textSize="@dimen/large_font"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/rv_3"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/solid_red_no_border"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="删除班组分配"
+            android:textColor="@color/white"
+            android:textSize="@dimen/large_font" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/is_team_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/is_team_2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/solid_white_no_border"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/left_8"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="已选电梯"
+                android:textColor="@color/black_28"
+                android:textSize="@dimen/large_font" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/left_8"
+                android:id="@+id/rv_elevator_name"
+                android:layout_weight="4"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/default_text_grey_color"
+
+                android:textSize="@dimen/large_font" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/left_8">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/left_8"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="合作方"
+
+                android:textColor="@color/black_28"
+                android:textSize="@dimen/large_font" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:id="@+id/Unit_1"
+                android:clickable="true"
+                android:layout_marginRight="@dimen/left_8"
+                android:layout_weight="4"
+                android:background="@drawable/solid_white_border"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/large_font" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/left_8">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/left_8"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="安装队长"
+                android:textColor="@color/black_28"
+                android:textSize="@dimen/large_font" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="@dimen/left_8"
+                android:layout_weight="4"
+                android:id="@+id/is_team_lead"
+                android:clickable="true"
+                android:background="@drawable/solid_white_border"
+                android:drawableRight="@drawable/down"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/large_font" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/is_team_4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/is_team_3"
+        android:background="@color/main_grey">
+        >
+
+        <ImageView
+            android:id="@+id/rv_4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/is_elevator_team_confirm" />
+
+
+        <TextView
+            android:id="@+id/rv_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/rv_4"
+            android:gravity="center_vertical"
+            android:text="班组成员"
+            android:textSize="@dimen/large_font"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/rv_7"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/is_add_red" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/is_team_5"
+        android:layout_width="match_parent"
+
+        android:layout_height="0dp"
+        android:layout_above="@+id/is_team_6"
+        android:layout_below="@+id/is_team_4"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/solid_white_no_border"
+        android:scrollbars="none"
+        tools:listitem="@layout/item_elevator_team_member" />
+
+    <LinearLayout
+        android:id="@+id/is_team_6"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/rv_10"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="4"
+            android:background="@drawable/solid_red_no_border"
+            android:gravity="center"
+            android:text="确认"
+            android:textColor="@color/white"
+            android:textSize="@dimen/large_font" />
+
+
+        <Button
+            android:id="@+id/rv_11"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="4"
+            android:background="@drawable/solid_grey_border"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="@dimen/large_font" />
+    </LinearLayout>
+
+</RelativeLayout>

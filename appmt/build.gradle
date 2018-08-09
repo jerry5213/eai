@@ -1,0 +1,69 @@
+if (isModule.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+
+android {
+    compileSdkVersion build_versions.target_sdk
+
+    defaultConfig {
+        /*applicationId "com.zxtech.mtos"*/
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        multiDexEnabled true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [ moduleName : project.getName() ]
+            }
+        }
+    }
+
+
+
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            if (isModule.toBoolean()) {
+                manifest.srcFile 'src/main/module/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+                //集成开发模式下排除debug文件夹中的所有Java文件
+                java {
+                    exclude 'debug*//**'
+                }
+            }
+        }
+    }
+}
+
+def releaseTime() {
+    return new Date().format("yyyyMMdd")
+}
+
+dependencies {
+    implementation files('libs/Amap_2DMap_V5.2.0_20170627.jar')
+    implementation files('libs/AMap_Location_V2.5.0_20160526.jar')
+    implementation files('libs/commons-beanutils-1.8.0.jar')
+    implementation files('libs/pushservice-5.2.0.12.jar')
+    implementation files('libs/universal-image-loader-1.9.5.jar')
+    implementation files('libs/volley.jar')
+
+    implementation project(':lib_common')
+    compile project(':scormplugin')
+    compile 'com.commit451:PhotoView:1.2.4'
+    compile 'org.apache.httpcomponents:httpmime:4.2.5'
+    compile 'com.necer.ncalendar:ncalendar:1.0.8'
+    compile 'com.malinskiy:superrecyclerview:1.1.4'
+    compile 'com.jaredrummler:material-spinner:1.0.5'
+    //二维码扫描
+    compile 'com.google.zxing:core:3.3.0'
+    compile 'cn.bingoogolapple:bga-qrcodecore:1.1.7@aar'
+    compile 'cn.bingoogolapple:bga-zxing:1.1.7@aar'
+    compile 'com.xiaosong520:doublewaveview:1.0.1'
+
+
+    annotationProcessor deps.arouter_compiler
+
+}

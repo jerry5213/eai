@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_whitebg_radius"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <TextView
+        android:id="@+id/title_textview"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:background="@drawable/shape_com_dialog_title"
+        android:gravity="center|left"
+        android:paddingLeft="10dp"
+        android:text="title"
+        android:textColor="#0075c2"
+        android:textSize="14sp"
+        android:visibility="visible" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#a5a5a5" />
+
+    <!-- 内容 -->
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/shape_whitebg_bottom_radius" >
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF" >
+        </ListView>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#a5a5a5" />
+
+    <RelativeLayout
+        android:id="@+id/buttonPool"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:background="#eeeeee"
+        android:gravity="center_vertical">
+
+        <View
+            android:id="@+id/line_view"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/confirm_button"
+            android:layout_toLeftOf="@id/line_view"
+            android:layout_marginRight="23dp"
+            android:layout_width="80dp"
+            android:layout_centerVertical="true"
+            android:layout_height="35dp"
+            android:background="@drawable/button_bluebg_radius"
+            android:text="@string/confirm"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_toRightOf="@id/line_view"
+            android:layout_marginLeft="23dp"
+            android:layout_centerVertical="true"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:background="@drawable/button_bluebg_radius"
+            android:text="@string/cancel"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

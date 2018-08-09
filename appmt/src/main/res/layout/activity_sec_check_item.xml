@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/group_name_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/explain"/>
+        <TextView
+            android:id="@+id/include_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/include_imagebutton"
+            android:text="@string/not_involve"/>
+
+        <ImageButton
+            android:id="@+id/include_imagebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/close"
+
+            />
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/explain_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp"
+        />
+
+
+
+    <ListView
+        android:id="@+id/item_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#6e6e6e"
+        android:background="@color/white"
+        android:dividerHeight="1px">
+
+        </ListView>
+    
+    <EditText
+        android:id="@+id/desc_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_round_border"
+        android:paddingLeft="3dp"
+        android:gravity="top"
+        android:maxLength="150"
+        android:hint="@string/no_item_desc"
+        android:textSize="13sp"/>
+
+</LinearLayout>

@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#eeeeee">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/produce_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="1px"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:background="@drawable/button_press_radius_selector"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/produce_title"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/production_code" />
+
+            <TextView
+                android:id="@+id/produce_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/produce_title"
+                android:singleLine="true"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp" />
+
+            <ImageButton
+                android:id="@+id/type_imagebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/open"
+
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/project_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="1px"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:background="@drawable/button_press_radius_selector"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/project"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1px"
+                android:background="#00000000"
+                android:text="@string/project"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:paddingLeft="10dp"
+                />
+            <TextView
+                android:id="@+id/project_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/project"
+                android:singleLine="true"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/elevator_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="1px"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:background="@drawable/button_press_radius_selector"
+            android:layout_gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/elevator_title"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/elevator" />
+
+            <TextView
+                android:id="@+id/elevator_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/elevator_title"
+                android:singleLine="true"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="1px"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:background="@drawable/button_press_radius_selector"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1px"
+                android:background="#00000000"
+                android:text="@string/date"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:paddingLeft="10dp"
+                />
+            <TextView
+                android:id="@+id/date_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/date"
+                android:singleLine="true"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp" />
+
+        </RelativeLayout>
+
+
+
+
+       <!-- <RelativeLayout
+            android:id="@+id/unproduce_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="1px"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:visibility="gone"
+            android:descendantFocusability="blocksDescendants"
+            android:background="@drawable/button_press_radius_selector"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/unproduce"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="非生产性类型" />
+
+            <TextView
+                android:id="@+id/unproduce_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/unproduce"
+                android:singleLine="true"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp" />
+        </RelativeLayout>-->
+
+
+       <!-- <RelativeLayout
+            android:id="@+id/work_start_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="1px"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:background="@drawable/button_press_radius_selector"
+            >
+
+            <TextView
+                android:id="@+id/work_start_title"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="工时开始" />
+
+            <TextView
+                android:id="@+id/work_start_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/work_start_title"
+                android:layout_toLeftOf="@+id/work_start_icon"
+                android:singleLine="true"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:text=""/>
+            <TextView
+                android:id="@+id/work_start_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/calendar"
+                />
+
+        </RelativeLayout>-->
+
+       <!-- <RelativeLayout
+            android:id="@+id/work_end_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="1px"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:background="@drawable/button_press_radius_selector"
+            >
+
+            <TextView
+                android:id="@+id/work_end_title"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="工时结束" />
+
+            <TextView
+                android:id="@+id/work_end_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/work_end_title"
+                android:layout_toLeftOf="@+id/work_end_icon"
+                android:singleLine="true"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp" />
+            <TextView
+                android:id="@+id/work_end_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/calendar"/>
+
+        </RelativeLayout>-->
+
+
+        <RelativeLayout
+            android:id="@+id/work_time_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="1px"
+            android:layout_weight="1"
+            android:background="@color/white"
+             >
+
+            <TextView
+                android:id="@+id/work_time"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/work_hours" />
+
+            <EditText
+                android:id="@+id/work_time_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/work_time"
+                android:layout_toLeftOf="@+id/work_time_unit"
+                android:inputType="number"
+                android:singleLine="true"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:paddingRight="10dp" />
+            <TextView
+                android:id="@+id/work_time_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="10dp"
+                android:text="@string/min"/>
+
+        </RelativeLayout>
+
+        <!--<RelativeLayout
+            android:id="@+id/road_start_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="1px"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:background="@drawable/button_press_radius_selector"
+            >
+
+            <TextView
+                android:id="@+id/road_start_title"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="在途开始" />
+
+            <TextView
+                android:id="@+id/road_start_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/road_start_title"
+                android:layout_toLeftOf="@+id/road_start_icon"
+                android:singleLine="true"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp" />
+            <TextView
+                android:id="@+id/road_start_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/calendar"
+                />
+
+        </RelativeLayout>-->
+
+      <!--  <RelativeLayout
+            android:id="@+id/road_end_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="1px"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:background="@drawable/button_press_radius_selector"
+            >
+
+            <TextView
+                android:id="@+id/road_end_title"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="在途结束" />
+
+            <TextView
+                android:id="@+id/road_end_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/road_end_title"
+                android:layout_toLeftOf="@+id/road_end_icon"
+                android:singleLine="true"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp" />
+            <TextView
+                android:id="@+id/road_end_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/calendar"
+                />
+
+        </RelativeLayout>-->
+        <RelativeLayout
+            android:id="@+id/on_way_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="1px"
+            android:layout_weight="1"
+            android:background="@color/white"
+            >
+
+            <TextView
+                android:id="@+id/on_way"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1px"
+                android:background="#00000000"
+                android:text="@string/on_way_hours"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:paddingLeft="10dp"
+                />
+            <EditText
+                android:id="@+id/on_way_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/on_way"
+                android:layout_toLeftOf="@+id/on_way_unit"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp" />
+            <TextView
+                android:id="@+id/on_way_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="10dp"
+                android:text="@string/min"/>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="1px"
+            android:layout_weight="2"
+            android:background="@drawable/button_press_radius_selector" >
+
+            <TextView
+                android:id="@+id/remark_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/remark" />
+
+            <EditText
+                android:id="@+id/remark_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:maxLength="150"
+                android:imeOptions="actionDone"
+                android:layout_marginRight="15dp"
+                android:layout_toRightOf="@+id/remark_tv"
+                android:layout_marginTop="15dp"
+                android:textSize="14sp"
+                android:background="@null" />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>

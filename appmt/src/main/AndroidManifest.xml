@@ -1,0 +1,351 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zxtech.mtos">
+
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.screen.landscape" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" />
+
+    <!--  <supports-screens
+          android:anyDensity="true"
+          android:largeScreens="true"
+          android:normalScreens="true"
+          android:smallScreens="true"
+          android:xlargeScreens="true" />-->
+
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 请求网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!--写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.zxtech.mtos" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <permission
+        android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.zxtech.mtos"
+        android:protectionLevel="normal"></permission>
+    <!-- 富媒体需要声明的权限 -->
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <!--这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!-- 不是SDK需要的权限，是示例中的后台唤醒定位需要的权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- 需要运行时注册的权限 -->
+    <!-- 更改设置 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- Normal Permissions 不需要运行时注册 -->
+
+    <!--获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <!--用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--读取缓存数据-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+    <application
+
+        android:configChanges="locale|orientation|keyboardHidden"
+
+        android:name="com.zxtech.mt.activity.MyApplication"
+        android:screenOrientation="portrait"
+
+
+        >
+
+        <activity
+            android:name="com.zxtech.mt.activity.AccBottomMenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyleBottom">
+
+        </activity>
+
+        <activity
+            android:name="com.zxtech.mt.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+
+
+        </activity>
+
+        <activity
+            android:name="com.zxtech.mt.activity.AccessScanActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name="com.zxtech.mt.activity.AccessoryTraceActivity"
+            android:screenOrientation="portrait">
+
+
+        </activity>
+
+        <activity
+            android:name="com.zxtech.mt.activity.AccessoryShopActivity"
+            android:screenOrientation="portrait">
+
+
+        </activity>
+
+        <activity
+            android:name="com.zxtech.mt.activity.AccessoryGoodsDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.zxtech.mt.imagepicker.ImageGridActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zxtech.mt.imagepicker.ImageCropActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.zxtech.mt.activity.SpaceImageSignActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.zxtech.mt.activity.SignatrueActivity"
+            android:screenOrientation="landscape">
+
+
+        </activity>
+
+
+        <activity
+            android:name="com.zxtech.mt.activity.MtPhotoActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+
+        <activity
+            android:name="com.zxtech.mt.activity.SettingActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.zxtech.mt.activity.ModifyPasswordActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.zxtech.mt.activity.MtFeedbackActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.zxtech.mt.activity.CallFeedbackActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.zxtech.mt.activity.MtCheckItemActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+
+        <activity
+            android:name="com.zxtech.mt.activity.MtActivity"
+            android:screenOrientation="portrait"></activity>
+
+
+        <activity
+            android:name="com.zxtech.mt.activity.CallActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.zxtech.mt.activity.LocationSourceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name="com.zxtech.mt.activity.CallFormActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+
+        <activity
+            android:name="com.zxtech.mt.activity.AccessoryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+
+        <activity
+            android:name="com.zxtech.mt.activity.LoadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name="com.zxtech.mt.activity.TestBdSpeech"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+
+        <activity
+            android:name="com.zxtech.mt.activity.HomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+
+        <activity
+            android:name="com.zxtech.mt.activity.SpaceImageDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMTheme.Transparent">
+
+        </activity>
+
+
+        <activity
+            android:name="com.zxtech.mt.activity.StandardPartSelectProjectActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name="com.zxtech.mt.activity.StandardPartSelectAccActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+
+        <activity
+            android:name="com.zxtech.mt.imagepicker.ImagePreviewDelActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+
+        <activity
+            android:name="com.zxtech.mt.activity.StandardPartSelectDeviceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+
+
+        <activity
+            android:name="com.zxtech.mt.activity.StandardPartActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+
+        <activity
+            android:name="com.zxtech.mt.activity.MyActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name="com.zxtech.mt.activity.WorkCheckActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+
+        <activity
+            android:name="com.zxtech.mt.activity.MtCheckPhotoActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity
+            android:name="com.zxtech.mt.activity.BottomMenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyleBottom">
+
+        </activity>
+
+
+        <activity
+            android:name="com.zxtech.mt.activity.ElevatorInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+        <activity
+            android:name="com.zxtech.mt.activity.SettingIPActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+        </activity>
+
+        <activity
+            android:name="com.zxtech.mt.activity.MtTaskActivity"
+            android:screenOrientation="portrait" />
+
+
+
+
+
+        <service  android:name="com.zxtech.mt.service.LocationService"
+            >
+        </service>
+
+        <service android:name="com.zxtech.mt.service.LocationService"></service>
+
+        <!--定位需要的服务-->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <!--高德地图key-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="28b1785c0e8b28dc2e4d760a6b612a7a"
+            tools:replace="android:value" />
+
+
+        <!-- 在百度开发者中心查询应用的API Key -->
+
+        <!-- 再次重复！！填写APP_ID 时请检查在官网的该应用内是否设置了包名。否则会导致唤醒词及离线功能无法使用。
+         本demo的包名是com.baidu.speech.recognizerdemo，在build.gradle文件中查看。 -->
+        <!-- 正式发布时，请替换成您自己的appId 本demo的appId会不定时下线 -->
+
+        <service
+            android:name="com.baidu.speech.VoiceRecognitionService"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

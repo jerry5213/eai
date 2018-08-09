@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <strok
+        android:width="3px"
+        android:color="@color/is_chcek_green"
+        />
+    <solid android:color="@color/is_chcek_green" />
+    <corners android:radius="4dp" />
+    <padding
+        android:bottom="2dp"
+        android:top="2dp"
+        android:left="7dp"
+        android:right="7dp"
+        />
+</shape>

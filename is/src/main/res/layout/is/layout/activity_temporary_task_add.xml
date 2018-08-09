@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_grey"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/activity_temporary_task_add_1"
+        layout="@layout/common_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/activity_temporary_task_add_2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/activity_temporary_task_add_1">
+
+        <ImageView
+            android:id="@+id/temporary_task_rv_1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/is_image_temporary_task_project" />
+
+
+        <TextView
+            android:id="@+id/temporary_task_rv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/temporary_task_rv_1"
+            android:gravity="center_vertical"
+            android:text="@string/is_project_info"
+            android:textSize="@dimen/large_font"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_temporary_task_add_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_temporary_task_add_2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/solid_white_no_border"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/left_8">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/left_8"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="@string/is_project_name"
+
+                android:textColor="@color/black_28"
+                android:textSize="@dimen/large_font" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:id="@+id/temporary_task_add_project"
+                android:clickable="true"
+                android:layout_marginRight="@dimen/left_8"
+                android:layout_weight="4"
+                android:background="@drawable/solid_white_border"
+                android:gravity="center_vertical"
+                android:drawableRight="@drawable/down"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/large_font" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/left_8">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/left_8"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="@string/is_elevator_no"
+                android:textColor="@color/black_28"
+                android:textSize="@dimen/large_font" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:id="@+id/temporary_task_add_elevator"
+                android:layout_marginRight="@dimen/left_8"
+                android:layout_weight="4"
+                android:background="@drawable/solid_white_border"
+                android:drawableRight="@drawable/down"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/large_font" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/left_8"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/left_8"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="@string/is_temporary_task_type"
+                android:textColor="@color/black_28"
+                android:textSize="@dimen/large_font" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:id="@+id/temporary_task_add_type"
+                android:layout_marginRight="@dimen/left_8"
+                android:layout_weight="4"
+                android:background="@drawable/solid_white_border"
+                android:drawableRight="@drawable/down"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/large_font" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/activity_temporary_task_add_4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/activity_temporary_task_add_3"
+        android:background="@color/main_grey">
+        >
+
+        <ImageView
+            android:id="@+id/temporary_task_rv_4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/is_image_temporary_task_task" />
+
+
+        <TextView
+            android:id="@+id/temporary_task_rv_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/temporary_task_rv_4"
+            android:gravity="center_vertical"
+            android:text="@string/is_temporary_task_type_execute"
+            android:textSize="@dimen/large_font"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_temporary_task_add_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_temporary_task_add_4"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/solid_white_no_border"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/left_8">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/left_8"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="@string/is_temporary_task_user"
+
+                android:textColor="@color/black_28"
+                android:textSize="@dimen/large_font" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:id="@+id/temporary_task_add_user"
+                android:clickable="true"
+                android:layout_marginRight="@dimen/left_8"
+                android:layout_weight="4"
+                android:background="@drawable/solid_white_border"
+                android:gravity="center_vertical"
+                android:drawableRight="@drawable/down"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/large_font" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/left_8">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/left_8"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="@string/is_temporary_task_start_data"
+                android:textColor="@color/black_28"
+                android:textSize="@dimen/large_font" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:id="@+id/temporary_task_add_startdate"
+                android:layout_marginRight="@dimen/left_8"
+                android:layout_weight="4"
+                android:background="@drawable/solid_white_border"
+                android:drawableRight="@drawable/is_icon_datepicker"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/large_font" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/left_8"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/left_8"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="@string/is_temporary_task_end_data"
+                android:textColor="@color/black_28"
+                android:textSize="@dimen/large_font" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:id="@+id/temporary_task_add_enddate"
+                android:layout_marginRight="@dimen/left_8"
+                android:layout_weight="4"
+                android:background="@drawable/solid_white_border"
+                android:drawableRight="@drawable/is_icon_datepicker"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/default_text_grey_color"
+                android:textSize="@dimen/large_font" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/temporary_task_add_save"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="4"
+            android:background="@drawable/is_solid_green_no_border"
+            android:gravity="center"
+            android:text="@string/is_confirm"
+            android:textColor="@color/white"
+            android:textSize="@dimen/large_font" />
+
+
+        <Button
+            android:id="@+id/temporary_task_add_return"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="4"
+            android:background="@drawable/solid_grey_border"
+            android:gravity="center"
+            android:text="@string/is_abolished"
+            android:textColor="@color/white"
+            android:textSize="@dimen/large_font" />
+    </LinearLayout>
+
+</RelativeLayout>

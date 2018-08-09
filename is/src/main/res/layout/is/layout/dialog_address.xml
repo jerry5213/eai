@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_is_address_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:text="安装地址"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/dp_20"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="10dp"
+        android:background="@color/line" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_10">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp_15"
+            android:text="@string/is_selected_elevator_no"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="："/>
+        <TextView
+            android:id="@+id/tv_is_elevator_no"
+            android:paddingLeft="@dimen/dp_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="L1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/province_selector"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/left_8"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@drawable/solid_white_border"
+            android:drawableRight="@drawable/down"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:textColor="@color/default_text_grey_color"
+            android:textSize="@dimen/large_font"
+            />
+
+        <TextView
+            android:id="@+id/city_selector"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/left_8"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@drawable/solid_white_border"
+            android:drawableRight="@drawable/down"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:textColor="@color/default_text_grey_color"
+            android:textSize="@dimen/large_font"
+            />
+
+        <TextView
+            android:id="@+id/area_selector"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@drawable/solid_white_border"
+            android:drawableRight="@drawable/down"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:textColor="@color/default_text_grey_color"
+            android:textSize="@dimen/large_font"
+            />
+    </LinearLayout>
+    <EditText
+        android:id="@+id/et_is_other_address"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        style="@style/EditText"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/solid_white_border"
+        android:textColor="@color/default_text_black_color"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="50dp"
+        android:background="@color/line" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_is_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/default_text_grey_color"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp_15"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/dp_10"
+            android:text="@string/is_abolished"/>
+        <TextView
+            android:id="@+id/tv_is_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/dp_10"
+            android:background="@color/main"
+            android:text="@string/is_sure"/>
+    </LinearLayout>
+
+
+</LinearLayout>

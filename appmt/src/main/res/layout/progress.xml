@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_border_whitebg_5dip"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/process_title"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:gravity="center"
+        android:text="title"
+        android:textColor="#0075c2"
+        android:textSize="14sp"
+        android:visibility="visible"
+        android:background="@drawable/shape_com_dialog_title" />
+
+    <LinearLayout
+        android:id="@+id/process_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+    	android:paddingRight="10dp" >
+
+        <ProgressBar
+            android:id="@+id/updateProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60.0dip"
+        android:background="@drawable/shape_com_dialog_buttom"
+        android:orientation="horizontal"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/process_negativeButton"
+            android:layout_width="80.0dip"
+            android:layout_height="35.0dip"
+            android:background="@drawable/button_darkgray_radius"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</LinearLayout>

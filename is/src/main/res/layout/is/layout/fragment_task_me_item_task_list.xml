@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal">
+
+                <TextView
+                    android:id="@+id/task_me_temporary_task_list_a"
+                    style="@style/TextView"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:textColor="@drawable/is_temporary_task_title_red"
+                    android:textStyle="bold"
+                    android:text="@string/is_item_assigned"
+                    android:textSize="@dimen/middle_font" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal">
+
+                <TextView
+                    android:id="@+id/task_me_temporary_task_list_b"
+                    style="@style/TextView"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:textColor="@drawable/is_temporary_task_title_red"
+                    android:textStyle="bold"
+                    android:text="@string/is_insta_way_records"
+                    android:textSize="@dimen/middle_font" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="12dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal">
+
+                <TextView
+                    android:id="@+id/task_me_temporary_task_tab_list_a"
+                    android:layout_width="30dp"
+                    android:layout_height="10px"
+                    android:background="@drawable/is_temporary_task_title_tab_red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="12dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal">
+
+                <TextView
+                    android:id="@+id/task_me_temporary_task_tab_list_b"
+                    android:layout_width="30dp"
+                    android:layout_height="10px"
+                    android:background="@drawable/is_temporary_task_title_tab_red" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/task_me_temporary_task_list_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </FrameLayout>
+
+</LinearLayout>

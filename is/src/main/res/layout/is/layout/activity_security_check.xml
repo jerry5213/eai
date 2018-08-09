@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical|center_horizontal">
+
+            <LinearLayout
+                android:id="@+id/is_security_check_border_0"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/is_square_selector_yellow_background"
+                android:gravity="center_vertical|center_horizontal">
+
+                <TextView
+                    android:id="@+id/is_security_check_text_0"
+                    style="@style/Button"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/is_storage_room"
+                    android:textColor="@drawable/is_square_selector_yellow_textcolor"
+                    android:textStyle="bold"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="2dp"
+                android:layout_height="match_parent">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/is_security_check_border_1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/is_square_selector_grassgreen_background"
+                android:gravity="center_vertical|center_horizontal">
+
+                <TextView
+                    android:id="@+id/is_security_check_text_1"
+                    style="@style/Button"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="0dp"
+                    android:text="@string/is_computer_room"
+                    android:textColor="@drawable/is_square_selector_grassgreen_textcolor"
+                    android:textStyle="bold"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="2dp"
+                android:layout_height="match_parent">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/is_security_check_border_2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/is_square_selector_lightblue_background"
+                android:gravity="center_vertical|center_horizontal">
+
+                <TextView
+                    android:id="@+id/is_security_check_text_2"
+                    style="@style/Button"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/is_well_path"
+                    android:textColor="@drawable/is_square_selector_lightblue_textcolor"
+                    android:textStyle="bold"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="2dp"
+                android:layout_height="match_parent">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/is_security_check_border_3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/is_square_selector_green_background"
+                android:gravity="center_vertical|center_horizontal">
+
+                <TextView
+                    android:id="@+id/is_security_check_text_3"
+                    style="@style/Button"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/is_bottom_pit"
+                    android:textColor="@drawable/is_square_selector_green_textcolor"
+                    android:textStyle="bold"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="2dp"
+                android:layout_height="match_parent">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/is_security_check_border_4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/is_square_selector_purple_background"
+                android:gravity="center_vertical|center_horizontal">
+
+                <TextView
+                    android:id="@+id/is_security_check_text_4"
+                    style="@style/Button"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/is_other"
+                    android:textColor="@drawable/is_square_selector_purple_textcolor"
+                    android:textStyle="bold"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/is_security_check_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="10dp"
+        android:gravity="center_vertical|center_horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/is_light_blue_fill"
+            android:gravity="center_vertical|center_horizontal">
+
+            <TextView
+                android:id="@+id/is_security_check_save_button"
+                style="@style/Button"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/is_preserve"
+                android:textColor="@color/color_background_white"
+                android:textStyle="bold"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

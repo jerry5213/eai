@@ -1,0 +1,983 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebeb"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/main_grey" />
+
+    <ScrollView style="@style/ScrollView">
+
+        <LinearLayout style="@style/LinearLayout_vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp">
+
+                <LinearLayout
+                    android:id="@+id/layout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/pm" />
+
+                    <TextView
+                        style="@style/TextView"
+                        android:layout_marginLeft="7dp"
+                        android:text="@string/is_project_info"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="@dimen/sp_15"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_proc_info"
+                    style="@style/TextView"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:layout_alignBottom="@+id/layout1"
+                    android:layout_alignTop="@+id/layout1"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="@dimen/dp_40"
+                    android:text="@string/is_proc_info"
+                    android:textColor="@color/main"
+                    android:textSize="@dimen/sp_15"
+                    android:textStyle="bold" />
+
+                <com.zxtech.is.widget.IconFontTextView
+                    android:id="@+id/tv_open_project_info"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center|right"
+                    android:text="@string/icon_zhe_die_close"
+                    android:textColor="@color/default_text_grey_color"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:id="@+id/is_project_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/solid_white_no_border"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/is_project_name"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_is_project_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="9"
+                        android:text=""
+                        android:textColor="#969696"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/is_project_address"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/is_project_address"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="9"
+                        android:text=""
+                        android:textColor="#969696"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/is_agency"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_is_agent_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="9"
+                        android:text=""
+                        android:textColor="#969696"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/is_product_units"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/is_product_units"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="9"
+                        android:text=""
+                        android:textColor="#969696"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/is_file_orange" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:text="@string/is_project_attach"
+                    android:textSize="@dimen/sp_15"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:background="@drawable/solid_white_no_border"
+                android:padding="10dp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_is_project_attach"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="10dp"
+                    android:scrollbars="horizontal"
+                    tools:listitem="@layout/item_img_detail_common">
+                </android.support.v7.widget.RecyclerView>
+                <TextView
+                    android:id="@+id/tv_is_no_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/mrl"/>
+
+
+            </LinearLayout>
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/is_file_orange" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:text="@string/is_elevator_attach"
+                    android:textSize="@dimen/sp_15"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/solid_white_no_border"
+                android:padding="10dp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_is_elevator_attach"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="10dp"
+                    android:scrollbars="horizontal"
+                    tools:listitem="@layout/item_img_detail_common"></android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:id="@+id/is_elevator_info_s1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/is_elevator_img"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/is_image_temporary_task_project" />
+
+                <TextView
+                    style="@style/TextView"
+                    android:layout_toRightOf="@+id/is_elevator_img"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:text="@string/is_elevator_info"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/large_font"
+                    android:textStyle="bold" />
+
+                <com.zxtech.is.widget.IconFontTextView
+                    android:id="@+id/tv_open_elevator_info"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center|right"
+                    android:text="@string/icon_zhe_die_close"
+                    android:textColor="@color/default_text_grey_color"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:id="@+id/is_elevator_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/solid_white_no_border"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/is_plan3CDate"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_is_plan3CDate"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="@dimen/left_8"
+                        android:layout_weight="3"
+                        android:background="@drawable/solid_white_border"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text=""
+                        android:textColor="@color/default_text_grey_color"
+                        android:textSize="@dimen/large_font" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/is_moneyS2Date"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_is_moneyS2Date"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="@dimen/left_8"
+                        android:layout_weight="3"
+                        android:background="@drawable/solid_white_border"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text=""
+                        android:textColor="@color/default_text_grey_color"
+                        android:textSize="@dimen/large_font" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/is_moeny3CDate"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_is_moeny3CDate"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="@dimen/left_8"
+                        android:layout_weight="3"
+                        android:background="@drawable/solid_white_border"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text=""
+                        android:textColor="@color/default_text_grey_color"
+                        android:textSize="@dimen/large_font" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/is_wellholeItem"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/wellholeItem_selector"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/left_8"
+                        android:layout_weight="3"
+                        android:background="@drawable/solid_white_border"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:textColor="@color/default_text_grey_color"
+                        android:textSize="@dimen/large_font" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/is_notifyItem"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/notifyItem_selector"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/left_8"
+                        android:layout_weight="3"
+                        android:background="@drawable/solid_white_border"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:textColor="@color/default_text_grey_color"
+                        android:textSize="@dimen/large_font" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/is_elevator_info_s2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/is_elevator_s2_img"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/is_image_temporary_task_project" />
+
+                <TextView
+                    style="@style/TextView"
+                    android:layout_toRightOf="@+id/is_elevator_s2_img"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:text="@string/is_elevator_info"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/large_font"
+                    android:textStyle="bold" />
+
+                <com.zxtech.is.widget.IconFontTextView
+                    android:id="@+id/tv_open_elevator_info_s2"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center|right"
+                    android:text="@string/icon_zhe_die_close"
+                    android:textColor="@color/default_text_grey_color"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:id="@+id/is_elevator_s2_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/solid_white_no_border"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/is_plan3CDate"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_is_plan3CDate_s2"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="@dimen/left_8"
+                        android:layout_weight="3"
+                        android:background="@drawable/solid_white_border"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text=""
+                        android:textColor="@color/default_text_grey_color"
+                        android:textSize="@dimen/large_font" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/is_moneyS2Date"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_is_moneyS2Date_s2"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="@dimen/left_8"
+                        android:layout_weight="3"
+                        android:background="@drawable/solid_white_border"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text=""
+                        android:textColor="@color/default_text_grey_color"
+                        android:textSize="@dimen/large_font" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/is_moeny3CDate"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_is_moeny3CDate_s2"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="@dimen/left_8"
+                        android:layout_weight="3"
+                        android:background="@drawable/solid_white_border"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text=""
+                        android:textColor="@color/default_text_grey_color"
+                        android:textSize="@dimen/large_font" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/is_wellholeItem"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/wellholeItem_selector_s2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/left_8"
+                        android:layout_marginRight="@dimen/left_8"
+                        android:layout_weight="1"
+                        android:background="@drawable/solid_white_border"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:textColor="@color/default_text_grey_color"
+                        android:textSize="@dimen/large_font" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="入场通道"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/enterItem_selector"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/left_8"
+                        android:layout_marginRight="@dimen/left_8"
+                        android:layout_weight="1"
+                        android:background="@drawable/solid_white_border"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:textColor="@color/default_text_grey_color"
+                        android:textSize="@dimen/large_font" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/is_yardItem"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/yardItem_selector"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/left_8"
+                        android:layout_marginRight="@dimen/left_8"
+                        android:layout_weight="1"
+                        android:background="@drawable/solid_white_border"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:textColor="@color/default_text_grey_color"
+                        android:textSize="@dimen/large_font" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/is_installTemItem"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/installTemItem_selector"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/left_8"
+                        android:layout_marginRight="@dimen/left_8"
+                        android:layout_weight="1"
+                        android:background="@drawable/solid_white_border"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:textColor="@color/default_text_grey_color"
+                        android:textSize="@dimen/large_font" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/is_storehouseItem"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/storehouseItem_selector"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/left_8"
+                        android:layout_marginRight="@dimen/left_8"
+                        android:layout_weight="1"
+                        android:background="@drawable/solid_white_border"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:textColor="@color/default_text_grey_color"
+                        android:textSize="@dimen/large_font" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/is_constructionItem"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/constructionItem_selector"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/left_8"
+                        android:layout_marginRight="@dimen/left_8"
+                        android:layout_weight="1"
+                        android:background="@drawable/solid_white_border"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:textColor="@color/default_text_grey_color"
+                        android:textSize="@dimen/large_font" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/pm" />
+
+                    <TextView
+                        style="@style/TextView"
+                        android:layout_marginLeft="7dp"
+                        android:text="@string/is_address_info"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="@dimen/sp_15"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <com.zxtech.is.widget.IconFontTextView
+                    android:id="@+id/is_address"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center|right"
+                    android:text="@string/icon_zhe_die_close"
+                    android:textColor="@color/default_text_grey_color"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:id="@+id/is_elevator_handle_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/solid_white_no_border"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/is_delivery_address"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/is_elevator_address"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="9"
+                        android:text=""
+                        android:textColor="#969696"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/is_elevator_address_detail"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/is_elevator_address_other"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="9"
+                        android:text=""
+                        android:textColor="#969696"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/is_install_address"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/is_elevator_install_adress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="9"
+                        android:text=""
+                        android:textColor="#969696"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/is_elevator_address_detail"
+                        android:textColor="@color/default_text_black_color"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/is_elevator_install_adress_other"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="9"
+                        android:text=""
+                        android:textColor="#969696"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_10">
+
+                <ImageView
+                    android:id="@+id/iv_is_address_img"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/is_contact_orange" />
+
+                <TextView
+                    android:id="@+id/tv_is_contact_txt"
+                    style="@style/TextView"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@+id/iv_is_address_img"
+                    android:text="@string/is_contact"
+                    android:textColor="@color/default_text_black_color"
+                    android:textSize="@dimen/large_font"
+                    android:textStyle="bold" />
+
+                <com.zxtech.is.widget.IconFontTextView
+                    android:id="@+id/tv_open_contact_info"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center|right"
+                    android:text="@string/icon_zhe_die_close"
+                    android:textColor="@color/default_text_grey_color"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:id="@+id/rv_is_contact_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/solid_white_no_border"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:scrollbars="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_is_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    tools:listitem="@layout/item_contact_review"></android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

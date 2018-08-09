@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/rv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp"
+        android:background="@drawable/is_false" />
+
+    <TextView
+        android:id="@+id/rv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_margin="15dp"
+        android:layout_alignParentLeft= "true"
+        android:text="@string/is_unit_list"
+        android:gravity="center"
+        android:textSize="@dimen/large_font"
+        android:textStyle="bold" />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/rv_1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/solid_grey_no_border_search"
+        android:queryBackground="@drawable/solid_grey_no_border_search"
+
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/is_please_input_search_comtent" />
+
+
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:id="@+id/rl_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/Space1"
+        android:layout_below="@+id/searchView">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/is_team_5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:scrollbars="none"
+            tools:listitem="@layout/item_sl_installationunit" />
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/Space1"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>
