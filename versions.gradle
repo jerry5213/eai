@@ -1,0 +1,108 @@
+/**
+ * Shared file between builds so that they can all use the same dependencies and
+ * maven repositories.
+ **/
+ext.deps = [:]
+
+def versions = [:]
+versions.android_gradle_plugin = "3.0.1"
+versions.support = "27.1.1"
+versions.multidex = "1.0.2"
+versions.glide = "3.8.0"
+versions.rxjava2 = "2.1.7"
+versions.rx_android = "2.0.1"
+versions.retrofit = "2.3.0"
+versions.event_bus = "3.1.1"
+versions.photo_view = "2.0.0"
+versions.persistent_cookie = "v1.0.1"
+versions.gson = "2.8.2"
+versions.swipe_recycler = "1.1.3"
+versions.utils = "1.10.0"
+versions.top_snackbar = "1.1.1"
+versions.logger = "1.15"
+versions.materialprogressbar = "1.1.7"
+versions.base_adapter_helper = "2.9.35"
+versions.zhy_base_adapter = "3.0.3"
+versions.filedownloader = "1.7.4"
+versions.thin_downloadmanager = "1.2.2"
+//butterknife
+versions.butterknife_compiler = "8.4.0"
+versions.butterknife = "8.4.0"
+//Arouter
+versions.arouter_compiler = "1.1.4"
+versions.arouter_api = "1.3.1"
+
+
+
+def deps = [:]
+
+def support = [:]
+support.annotations = "com.android.support:support-annotations:$versions.support"
+support.app_compat = "com.android.support:appcompat-v7:$versions.support"
+support.v13 = "com.android.support:support-v13:$versions.support"
+support.percent = "com.android.support:percent:$versions.support"
+support.recyclerview = "com.android.support:recyclerview-v7:$versions.support"
+support.cardview = "com.android.support:cardview-v7:$versions.support"
+support.design = "com.android.support:design:$versions.support"
+support.v4 = "com.android.support:support-v4:$versions.support"
+support.core_utils = "com.android.support:support-core-utils:$versions.support"
+support.multidex = "com.android.support:multidex:$versions.multidex"
+deps.support = support
+
+
+def retrofit = [:]
+retrofit.runtime = "com.squareup.retrofit2:retrofit:$versions.retrofit"
+retrofit.adapter = "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit"
+retrofit.gson = "com.squareup.retrofit2:converter-gson:$versions.retrofit"
+deps.retrofit = retrofit
+
+
+
+//view
+deps.swipe_recycler = "com.yanzhenjie:recyclerview-swipe:$versions.swipe_recycler"
+deps.photo_view = "com.github.chrisbanes:PhotoView:$versions.photo_view"
+deps.materialprogressbar = "me.zhanghai.android.materialprogressbar:library:$versions.materialprogressbar"
+
+deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
+deps.rxjava2 = "io.reactivex.rxjava2:rxjava:$versions.rxjava2"
+deps.rx_android = "io.reactivex.rxjava2:rxandroid:$versions.rx_android"
+//other
+deps.glide = "com.github.bumptech.glide:glide:$versions.glide"
+deps.event_bus = "org.greenrobot:eventbus:$versions.event_bus"
+deps.event_bus_compiler = "org.greenrobot:eventbus-annotation-processor:$versions.event_bus"
+deps.persistent_cookie = "com.github.franmontiel:PersistentCookieJar:$versions.persistent_cookie"
+deps.gson = "com.google.code.gson:gson:$versions.gson"
+deps.utils = "com.blankj:utilcode:$versions.utils"
+deps.top_snackbar ="com.androidadvance:topsnackbar:$versions.top_snackbar"
+deps.logger = "com.orhanobut:logger:$versions.logger"
+deps.base_adapter_helper = "com.github.CymChad:BaseRecyclerViewAdapterHelper:$versions.base_adapter_helper"
+deps.zhy_base_adapter = "com.zhy:base-rvadapter:$versions.zhy_base_adapter"
+deps.arouter_api = "com.alibaba:arouter-api:$versions.arouter_api"
+deps.arouter_compiler = "com.alibaba:arouter-compiler:$versions.arouter_compiler"
+deps.butterknife = "com.jakewharton:butterknife:$versions.butterknife"
+deps.butterknife_compiler = "com.jakewharton:butterknife-compiler:$versions.butterknife_compiler"
+deps.filedownloader = "com.liulishuo.filedownloader:library:$versions.filedownloader"
+deps.thin_downloadmanager = "com.mani:ThinDownloadManager:$versions.thin_downloadmanager"
+
+ext.deps = deps
+
+def build_versions = [:]
+build_versions.min_sdk = 19
+build_versions.target_sdk = 27
+build_versions.build_tools = "27.1.1"
+ext.build_versions = build_versions
+
+
+def addRepos(RepositoryHandler handler) {
+    handler.google()
+    handler.jcenter()
+    handler.mavenCentral()
+    //Add the JitPack repository
+    handler.maven { url "https://jitpack.io" }
+    handler.maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+    handler.maven {
+        url 'https://download.01.org/crosswalk/releases/crosswalk/android/maven2'
+    }
+}
+
+ext.addRepos = this.&addRepos
